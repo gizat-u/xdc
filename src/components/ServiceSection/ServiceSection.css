@@ -35,6 +35,10 @@
 	background-color: rgba(0,0,0, 0.1);
 }
 
+.service h3 {
+	text-align: center;
+}
+
 .service_blackout {
 	display: flex;
 	
@@ -56,14 +60,19 @@
 
 @media (min-width: 150px) and (max-width: 480px) {
 	.service {
-		width: 100%;
-		margin: 0;
+		width: 60%;
+	}
+	.service h3 {
+		font-size: 20px;
 	}
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
 	.service {
-		width: 100%;
+		width: 60%;
+	}
+	.service h3 {
+		font-size: 20px;
 	}
 }
 
@@ -71,11 +80,17 @@
 	.service {
 		width: 40%;
 	}
+	.service h3 {
+		font-size: 30px;
+	}
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
 	.service {
 		width: 45%;
+	}
+	.service h3 {
+		font-size: 30px;
 	}
 }
 
