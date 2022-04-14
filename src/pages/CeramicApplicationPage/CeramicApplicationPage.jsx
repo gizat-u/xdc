@@ -21,7 +21,7 @@ export const CeramicApplicationPage = () => {
 		>
 			<div className="Content">
 				<div className="video">
-					<video autoPlay playsInline loop muted preload="metadata" width="100%" src={ceramicing} />
+					<video autoPlay playsInline loop muted preload="auto" width="100%" src={ceramicing} />
 					<div className="video_blackout">
 						<h3>CeramicApplicationPage</h3>
 					</div>

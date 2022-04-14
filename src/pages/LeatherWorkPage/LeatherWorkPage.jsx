@@ -21,7 +21,7 @@ export const LeatherWorkPage = () => {
 		>
 			<div className="Content">
 				<div className="video">
-					<video autoPlay playsInline loop muted preload="metadata" width="100%" src={skining} />
+					<video autoPlay playsInline loop muted preload="auto" width="100%" src={skining} />
 					<div className="video_blackout">
 						<h3>Leather Work</h3>
 					</div>

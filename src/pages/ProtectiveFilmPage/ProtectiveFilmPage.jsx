@@ -21,7 +21,7 @@ export const ProtectiveFilmPage = () => {
 		>
 			<div className="Content">
 				<div className="video">
-					<video autoPlay playsInline loop muted preload="metadata" width="100%" src={filming} />
+					<video autoPlay playsInline loop muted preload="auto" width="100%" src={filming} />
 					<div className="video_blackout">
 						<h3>Protective Film</h3>
 					</div>

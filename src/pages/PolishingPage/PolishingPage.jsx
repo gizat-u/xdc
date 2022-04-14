@@ -21,7 +21,7 @@ export const PolishingPage = () => {
 		>
 			<div className="Content">
 				<div className="video">
-					<video autoPlay playsInline loop muted preload="metadata" width="100%" src={polishing} />
+					<video autoPlay playsInline loop muted preload="auto" width="100%" src={polishing} />
 					<div className="video_blackout">
 						<h3>Polishing</h3>
 					</div>

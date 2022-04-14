@@ -21,7 +21,7 @@ export const DryCleaningPage = () => {
 		>
 			<div className="Content">
 				<div className="video">
-					<video autoPlay playsInline loop muted preload="metadata" width="100%" src={cleaning} />
+					<video autoPlay playsInline loop muted preload="auto" width="100%" src={cleaning} />
 					<div className="video_blackout">
 						<h3>Dry Cleaning</h3>
 					</div>
