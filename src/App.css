@@ -93,6 +93,9 @@ a {
 		width: 80%;
 		flex-direction: column;
 	}
+	.content_el {
+		width: 100% !important;
+	}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
