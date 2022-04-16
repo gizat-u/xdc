@@ -1,0 +1,44 @@
+
+.explore_background {
+    display: flex;
+}
+
+.explore_background video {
+    width: 100%;
+}
+
+.content_el h1 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+	font-weight: 900;
+    font-size: 35px;
+
+
+    text-transform: uppercase;
+}
+
+.content_el b {
+    font-family: "Montserrat", sans-serif;
+	font-weight: 900;
+    color: red;
+}
+
+
+.content_el a {
+    display: flex;
+
+    padding: 15px 0;
+    transition: 0.35s all;
+    font-size: 2vmin;
+
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+	font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+.content_el a:hover {
+    color: red;
+    transform: scale(1.1);
+}

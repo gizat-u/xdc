@@ -3,61 +3,70 @@ import "./Header.css"
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-import { AiOutlineMenu, AiOutlinePhone, AiOutlineWhatsApp } from 'react-icons/ai';
+import { AiOutlineInstagram, AiOutlineYoutube, AiOutlinePhone, AiOutlineMenu } from 'react-icons/ai';
 import { FaTimes } from 'react-icons/fa';
 
 import logo from "../../assets/images/logo.png"
 
 export default function Header()
 {
-	const [social, setSocial] = useState(false);
 	const [menu, setMenu] = useState(false);
+	const [width, setWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		function handleResize() {
+			setWidth(window.innerWidth);
+		}
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, [width]);
 	
 	const menuToggleHandler = () => {
 		setMenu((p) => !p);
-		if (social)
-			setSocial(false);
-	}
-
-	const socialToggleHandler = () => {
-		setSocial((p) => !p);
-		if (menu)
-			setMenu(false);
 	}
 
 	const handleClickLink = () => {
 		setMenu(false);
-		setSocial(false);
 	}
+
+	useEffect(() => {
+		width >= 768 && setMenu(false);
+	},[width]);
 
 	return (
 		<header>
-			<nav>
-				<button onClick={() => socialToggleHandler()}>
-					{social ? 
-						<FaTimes color="red" />
-						:
-						<AiOutlinePhone />
-					}
-				</button>
+			<div className="logo">
 				<Link to="/">
-					<img src={logo} />
+					<img src={logo} alt="logotye" />
 				</Link>
-				<button onClick={() => menuToggleHandler()}>
-					{menu ? 
-						<FaTimes color="red" />
-						:
-						<AiOutlineMenu />
-					}
-				</button>
-			</nav>
-			<div className={`menu ${menu ?  'open' : '' } `}>
-				<Link to="/" onClick={() => handleClickLink()}>Home</Link>
-				<Link to="/about" onClick={() => handleClickLink()}>About</Link>
 			</div>
-			<div className={`menu social ${social ?  'open' : '' } `}>
-				<Link to="/" onClick={() => handleClickLink()}><AiOutlineWhatsApp /> What's App</Link>
-				<Link to="/" onClick={() => handleClickLink()}><AiOutlinePhone />Call +90(777) 777-77-77</Link>
+			<button className="btn_menu" onClick={() => menuToggleHandler()}>
+				{menu ? 
+					<FaTimes color="red" />
+					:
+					<AiOutlineMenu />
+				}
+			</button>
+			<div className={`menu ${menu ? 'open' : '' } `}>
+				<div className="menu_items">
+					<Link to="/">
+						Specialists & Certificates
+					</Link>
+					<Link to="/">
+						Contacts
+					</Link>
+				</div>
+				<div className="menu_links">
+					<Link to="/">
+						<AiOutlineInstagram />	
+					</Link>
+					<Link to="/">
+						<AiOutlineYoutube />
+					</Link>
+					<Link to="/">
+						<AiOutlinePhone />
+					</Link>
+				</div>
 			</div>
 		</header>
 	);

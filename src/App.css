@@ -1,4 +1,8 @@
 
+.App {
+	position: relative;
+}
+
 .Page {
 	display: flex;
 	flex-direction: column;
@@ -7,7 +11,8 @@
 
 	background-color: rgb(0,0,0);
 
-	min-height: 100vh;
+	min-height: 90vh;
+	padding-top: 10vh;
 }
 
 .Component {
@@ -17,68 +22,12 @@
 	justify-content: center;
 	align-items: center;
 
-	overflow: hidden;
 
-	min-height: 100vh;
 	z-index: 1;
 }
 
-.Content {
-	display: flex;
-	flex-direction: column;
-
-	color: #fff;
-
-	overflow: hidden;
-	
-	justify-content: center;
-	align-items: center;
-
-	width: 50%;
-	margin: auto;
-
-	min-height: 100vh;
-}
-
-.video {
-	display: flex;
-
-	overflow: hidden;
-
-	position: relative;
-	
-	transition: 0.35s all;
-}
-
-
-.video_blackout {
-	display: flex;
-	
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-
-	font-size: 30px;
-
-	background-color: rgba(0,0,0, 0.5);
-
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.video_blackout h3 { 
-	font-size: 50px;
-}
-
-h1, h2, h3 {
-	font-family: "PhonkContrast", sans-serif;
-}
-
-p, span, a {
-	font-family: "PhonkRegular", sans-serif;
+h1, h2, h3, p, span, a, button {
+	font-family: "Montserrat", sans-serif;
 }
 
 a svg {
@@ -92,4 +41,69 @@ button {
 
 a {
 	text-decoration: none;
+}
+
+
+
+
+.section_background {
+    max-height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.section_background_blackout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0,.75);
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.section_content {
+    display: flex;
+    justify-content: space-between;
+
+    margin: auto;
+    padding: 15px;
+}
+
+.content_el {
+    display: flex;
+    flex-direction: column;
+
+    color: #fff;
+    z-index: 1;
+}
+
+
+
+@media (min-width: 150px) and (max-width: 768px) {
+	.section_content {
+		width: 80%;
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.section_content {
+		width: 67%;
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 1025px) {
+	.section_content {
+		width: 63%;
+	}
 }
