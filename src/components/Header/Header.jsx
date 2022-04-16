@@ -36,7 +36,7 @@ export default function Header()
 	return (
 		<header>
 			<div className="logo">
-				<Link to="/">
+				<Link to="/" onClick={() => handleClickLink()}>
 					<img src={logo} alt="logotye" />
 				</Link>
 			</div>
@@ -49,21 +49,21 @@ export default function Header()
 			</button>
 			<div className={`menu ${menu ? 'open' : '' } `}>
 				<div className="menu_items">
-					<Link to="/">
+					<Link to="/" onClick={() => handleClickLink()}>
 						Specialists & Certificates
 					</Link>
-					<Link to="/">
+					<Link to="/" onClick={() => handleClickLink()}>
 						Contacts
 					</Link>
 				</div>
 				<div className="menu_links">
-					<Link to="/">
+					<Link to="/" onClick={() => handleClickLink()}>
 						<AiOutlineInstagram />	
 					</Link>
-					<Link to="/">
+					<Link to="/" onClick={() => handleClickLink()}>
 						<AiOutlineYoutube />
 					</Link>
-					<Link to="/">
+					<Link to="/" onClick={() => handleClickLink()}>
 						<AiOutlinePhone />
 					</Link>
 				</div>
