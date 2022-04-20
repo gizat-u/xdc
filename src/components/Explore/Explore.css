@@ -2,9 +2,6 @@
     display: flex;
 }
 
-.explore_background video {
-    width: 100%;
-}
 
 .content_el h1 {
     color: #fff;
