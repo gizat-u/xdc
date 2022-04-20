@@ -35,39 +35,44 @@ export default function Header()
 
 	return (
 		<header>
-			<div className="logo">
-				<Link to="/" onClick={() => handleClickLink()}>
-					<img src={logo} alt="logotye" />
-				</Link>
-			</div>
-			<button className="btn_menu" onClick={() => menuToggleHandler()}>
-				{menu ? 
-					<FaTimes color="red" />
-					:
-					<AiOutlineMenu />
-				}
-			</button>
-			<div className={`menu ${menu ? 'open' : '' } `}>
-				<div className="menu_items">
+			<nav>
+				<div className="logo">
 					<Link to="/" onClick={() => handleClickLink()}>
-						Specialists & Certificates
-					</Link>
-					<Link to="/" onClick={() => handleClickLink()}>
-						Contacts
+						<img src={logo} alt="logotye" />
 					</Link>
 				</div>
-				<div className="menu_links">
-					<Link to="/" onClick={() => handleClickLink()}>
-						<AiOutlineInstagram />	
-					</Link>
-					<Link to="/" onClick={() => handleClickLink()}>
-						<AiOutlineYoutube />
-					</Link>
-					<Link to="/" onClick={() => handleClickLink()}>
-						<AiOutlinePhone />
-					</Link>
+				<button className="btn_menu" onClick={() => menuToggleHandler()}>
+					{menu ? 
+						<FaTimes color="red" />
+						:
+						<AiOutlineMenu />
+					}
+				</button>
+				<div className={`menu ${menu ? 'open' : '' } `}>
+					<div className="menu_items">
+						<Link to="/" onClick={() => handleClickLink()}>
+							Home
+						</Link>
+						<Link to="/" onClick={() => handleClickLink()}>
+							Specialists & Certificates
+						</Link>
+						<Link to="/" onClick={() => handleClickLink()}>
+							Contacts
+						</Link>
+					</div>
+					<div className="menu_links">
+						<Link to="/" onClick={() => handleClickLink()}>
+							<AiOutlineInstagram />	
+						</Link>
+						<Link to="/" onClick={() => handleClickLink()}>
+							<AiOutlineYoutube />
+						</Link>
+						<Link to="/" onClick={() => handleClickLink()}>
+							<AiOutlinePhone />
+						</Link>
+					</div>
 				</div>
-			</div>
+			</nav>
 		</header>
 	);
 }

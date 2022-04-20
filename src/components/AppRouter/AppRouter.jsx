@@ -11,9 +11,12 @@ import { ServicePage } from '../../pages/ServicePage/ServicePage';
 const AppRouter = (props) => {
 
 	const location = useLocation();
-	
+
 	return (
-		<AnimatePresence>
+		<AnimatePresence
+			initial={false}
+			exitBeforeEnter
+		>
 			<Routes location={location} key={location.pathname}>
 				<Route path='/' element={<HomePage />} />
 				<Route path='/polishing' element={<ServicePage />} />
@@ -22,6 +25,6 @@ const AppRouter = (props) => {
 			</Routes>
 		</AnimatePresence>
 	);
-  };
+};
 
 export default AppRouter;

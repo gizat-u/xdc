@@ -14,9 +14,19 @@ export const HomePage = () => {
 	return (
 		<motion.main
 			className="Page"
-			initial={{ y: "-100vh", opacity: 0, background: "black" }}
-			animate={{ y: 0, opacity: 1, background: "black" }}
-			exit={{ y: "-100vh", opacity: 0,background: "black", transition: {duration: 0.1} }}
+			initial={{
+				y: "-100",
+				opacity: 0,
+			}}
+			animate={{
+				y: 0,
+				opacity: 1,
+			}}
+			exit={{
+				y: "-100",
+				opacity: 0,
+				transition: { duration: 0.1 }
+			}}
 		>
 			<Explore />
 		</motion.main>
