@@ -7,6 +7,7 @@ import { HomePage } from '../../pages/HomePage/HomePage';
 import { AnimatePresence } from "framer-motion";
 import { ServicePage } from '../../pages/ServicePage/ServicePage';
 
+import { services } from '../ServiceSection/ServiceData';
 
 const AppRouter = (props) => {
 
@@ -19,7 +20,12 @@ const AppRouter = (props) => {
 		>
 			<Routes location={location} key={location.pathname}>
 				<Route path='/' element={<HomePage />} />
-				<Route path='/polishing' element={<ServicePage />} />
+
+				{services.map(({ id, link, text }) => {
+					return (
+						<Route key={id} path={link} element={<ServicePage />} />
+					);
+				})}
 
 				<Route path='*' element={<ErrorPage />} />
 			</Routes>

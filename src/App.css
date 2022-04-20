@@ -11,7 +11,7 @@
 	background-color: rgb(0, 0, 0);
 
 	min-height: 90vh;
-	padding-top: 10vh;
+	padding-top: 9.9vh;
 }
 
 .Component {
@@ -119,6 +119,10 @@ a {
 	.section_content {
 		width: 67%;
 		flex-direction: column;
+	}
+
+	.content_el {
+		width: 100% !important;
 	}
 }
 

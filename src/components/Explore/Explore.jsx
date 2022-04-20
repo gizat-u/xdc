@@ -6,16 +6,7 @@ import { Link } from 'react-router-dom';
 
 import video_background from "../../assets/videos/explore.mp4";
 
-export const services = [
-	{ id: 1, link: "/polishing", text: "Polishing" },
-	{ id: 2, link: "/", text: "Exterior wash" },
-	{ id: 3, link: "/", text: "Window Tint" },
-	{ id: 4, link: "/", text: "Paint Protection Film" },
-	{ id: 5, link: "/", text: "Ceramic Coating" },
-	{ id: 6, link: "/", text: "Leather Trimming" },
-	{ id: 7, link: "/", text: "Dry Cleaning" },
-	{ id: 8, link: "/", text: "Paintless Dent Repair" },
-]
+import { services } from "../ServiceSection/ServiceData";
 
 export const Explore = () => {
 
@@ -56,25 +47,12 @@ export const Explore = () => {
 			</div>
 			<div className="section_content">
 				<div className="content_el">
-					<motion.h1
-						initial={"hidden"}
-						animate={"visible"}
-						transition={{
-							delay: 0.5,
-						}}
-						variants={animateH1}
-					>
+					<motion.h1 initial={"hidden"} animate={"visible"} transition={{ delay: 0.5, }} variants={animateH1} >
 						Car <b>Detaling</b><br /> and customizing <br /> services
 					</motion.h1>
 					{services.map(({ id, link, text }) => {
 						return (
-							<motion.span
-								key={id}
-								variants={animateServices}
-								initial="hidden"
-								animate="visible"
-								custom={id}
-							>
+							<motion.span key={id} variants={animateServices} initial="hidden" animate="visible" custom={id}>
 								<Link to={link} >
 									{text}
 								</Link>
