@@ -33,7 +33,8 @@
 	transition: all .35s;
 }
 
-.service_categories_content a:hover {
+.service_categories_content a:hover,
+.service_categories_content .active {
 	color: red;
 }
 

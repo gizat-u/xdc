@@ -1,18 +1,15 @@
-import "./ContactPage.css"
+import "./SpecCertPage.css"
 
 import React from "react";
 
 import { useTitle } from "../../utilities/useTitle";
 
 import { motion } from "framer-motion";
-import { BackgroundVideo } from "../../components/BackgroundVideo/BackgroundVideo";
 
-import map_background from "../../assets/images/map.png";
-import { ContactSection } from "../../components/ContactSection/ContactSection";
 
-export const ContactPage = () => {
+export const SpecCertPage = () => {
 
-    useTitle("Contacts | XDC");
+    useTitle("Specialists & Certificates | XDC");
 
     return (
         <motion.main
@@ -31,8 +28,7 @@ export const ContactPage = () => {
                 transition: { duration: 0.1 }
             }}
         >
-            <BackgroundVideo video={map_background} loop={false} blackout={false} image={true} />
-            <ContactSection />
+            asd
         </motion.main >
     );
 

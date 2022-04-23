@@ -10,9 +10,9 @@ import { ServicePage } from '../../pages/ServicePage/ServicePage';
 import { services } from '../../pages/ServicePage/ServicePageData';
 import { ContactPage } from '../../pages/ContactPage/ContactPage';
 import { PricePage } from '../../pages/PricePage/PricePage';
+import { SpecCertPage } from '../../pages/SpecCertPage/SpecCertPage';
 
 const AppRouter = (props) => {
-
 	const location = useLocation();
 
 	return (
@@ -25,6 +25,7 @@ const AppRouter = (props) => {
 
 				<Route path='/contacts' element={<ContactPage />} />
 				<Route path='/prices' element={<PricePage />} />
+				<Route path='/specialists-and-certificates' element={<SpecCertPage />} />
 
 				{services.map(({ id, link, text }) => {
 					return (

@@ -36,7 +36,7 @@ export const ServicePage = () => {
 			}}
 		>
 			<BackgroundVideo video={service.video} />
-			<ServiceCategories services={services} />
+			<ServiceCategories services={services} path={window.location.pathname} />
 			<ServiceSection service={service} />
 		</motion.main>
 	);

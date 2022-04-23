@@ -10,7 +10,6 @@ import { BackgroundVideo } from "../../components/BackgroundVideo/BackgroundVide
 import video_background from "../../assets/images/map.png";
 
 export const PricePage = () => {
-
     useTitle("Prices | XDC");
 
     return (

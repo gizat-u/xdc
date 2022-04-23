@@ -9,8 +9,9 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
 
-export const ServiceCategories = ({ services }) => {
+export const ServiceCategories = ({ services, path }) => {
 
+	const pathname = "" + path + "";
 	const { t } = useTranslation();
 
 	const animateServices = {
@@ -33,7 +34,7 @@ export const ServiceCategories = ({ services }) => {
 				{services.map(({ id, link, text }) => {
 					return (
 						<motion.span key={id} variants={animateServices} initial="hidden" animate="visible" custom={id} >
-							<Link to={link} >
+							<Link to={link} className={link === pathname ? "active" : ""}>
 								{t(text)}
 							</Link>
 						</motion.span>

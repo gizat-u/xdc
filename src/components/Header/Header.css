@@ -53,7 +53,8 @@ nav button {
 	z-index: 999;
 }
 
-nav>div a:hover {
+nav>div a:hover,
+nav .active {
 	color: red;
 }
 
