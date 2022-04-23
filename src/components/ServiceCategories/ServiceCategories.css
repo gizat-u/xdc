@@ -61,15 +61,17 @@
 
 .service_categories .open {
 	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
 
 	padding-top: 120px;
 	height: auto;
 
-	overflow-y: auto;
+	height: 84% !important;
 }
 
 .service_categories .open span {
-	width: 78%;
+	width: 39%;
 	border: 1px solid #fff;
 	margin: 10px;
 }
