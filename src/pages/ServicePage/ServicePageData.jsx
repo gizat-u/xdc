@@ -1,203 +1,157 @@
 
 
 import polishing_video from "../../assets/videos/polishing.mp4";
-import ceramicing_video from "../../assets/videos/ceramicing.mp4";
-import cleaning_video from "../../assets/videos/cleaning.mp4"
-import filming_video from "../../assets/videos/filming.mp4"
-import pdr_video from "../../assets/videos/pdr.mp4"
-import skining_video from "../../assets/videos/skining.mp4"
-import washing_video from "../../assets/videos/washing.mp4"
+import ceramic_video from "../../assets/videos/ceramic.mp4";
+import cleaning_video from "../../assets/videos/cleaning.mp4";
+import vinyl_video from "../../assets/videos/vinyl.mp4";
+import pdr_video from "../../assets/videos/pdr.mp4";
+import leather_video from "../../assets/videos/leather.mp4";
+import washing_video from "../../assets/videos/washing.mp4";
+import tint_video from "../../assets/videos/tint.mp4";
+import painting_video from "../../assets/videos/painting.mp4";
+import design_video from "../../assets/videos/design.mp4";
 
 
 export const detectService = (path) => {
 
 	if (path === "/polishing")
 		return PolishingData;
-	if (path === "/exterior-wash")
-		return WashData;
+	if (path === "/car-washing")
+		return CarWashingData;
 	if (path === "/window-tint")
-		return TintData;
-	if (path === "/paint-protection-film")
-		return FilmData;
-	if (path === "/ceramics")
-		return CersamicsgData;
+		return WindowTintData;
+	if (path === "/vinyl")
+		return VinylData;
+	if (path === "/ceramic-coating")
+		return CeramicCoatingData;
 	if (path === "/leather-trimming")
-		return LeatherData;
+		return LeatherTrimmingData;
 	if (path === "/dry-cleaning")
-		return CleaningData;
+		return DryCleaningData;
 	if (path === "/paintless-dent-repair")
 		return PDRData;
+	if (path === "/painting")
+		return PaintingData;
+	if (path === "/design-custom")
+		return DesignCustomData;
 	return (null);
 }
 
 
 export const services = [
-	// Car Washing
-	{ id: 7, link: "/dry-cleaning", text: "Dry Cleaning" },
-	{ id: 1, link: "/polishing", text: "Polishing" },
-	{ id: 5, link: "/ceramics", text: "Ceramic Coating" },
-	{ id: 3, link: "/window-tint", text: "Window Tint" },
-	// Vinyl
-	{ id: 8, link: "/paintless-dent-repair", text: "Paintless Dent Repair" },
-	// Painting
-	{ id: 6, link: "/leather-trimming", text: "Leather Trimming" },
+	{ id: 1, link: "/car-washing", text: "Car Washing" },
+	{ id: 2, link: "/dry-cleaning", text: "Dry Cleaning" },
+	{ id: 3, link: "/polishing", text: "Polishing" },
+	{ id: 4, link: "/ceramic-coating", text: "Ceramic Coating" },
+	{ id: 5, link: "/window-tint", text: "Window Tint" },
+	{ id: 6, link: "/vinyl", text: "Vinyl" },
+	{ id: 7, link: "/paintless-dent-repair", text: "Paintless Dent Repair" },
+	{ id: 8, link: "/painting", text: "Painting" },
+	{ id: 9, link: "/leather-trimming", text: "Leather Trimming" },
+	{ id: 10, link: "/design-custom", text: "Design and Custom" },
 
-	{ id: 2, link: "/exterior-wash", text: "Exterior wash" },
-	{ id: 4, link: "/paint-protection-film", text: "Paint Protection Film" },
 ];
 
-const PolishingData = {
+const CarWashingData = {
+	title: "Car Washing",
+	video: washing_video,
+	p: [
+		'Car Washing 1',
+		'Car Washing 2',
+		'Car Washing 3'
+	]
+};
 
+const DryCleaningData = {
+	title: "Dry Cleaning",
+	video: cleaning_video,
+	p: [
+		'Dry Cleaning 1',
+		'Dry Cleaning 2',
+		'Dry Cleaning 3',
+	]
+};
+
+const PolishingData = {
 	title: "Polishing",
 	video: polishing_video,
 	p: [
-		"Polishing_1",
-		"Polishing_2",
-		"Polishing_3",
-	],
-	priceList: [
-		{ id: 1, title: "Уровень #1", subtitle: "крупнозер + мелкозерн + финиш", light: 1300, jeep: 2000, size: "sm" },
-		{ id: 2, title: "Уровень #2", subtitle: "мелкозерн + финиш", light: 800, jeep: 1300, size: "sm" },
-
-		{ id: 3, title: "Удаление царапин", subtitle: "", light: "200-500", jeep: "200-500", size: "md" },
-		{ id: 4, title: "Обработка наждаткой окраш поверх", subtitle: "", light: 300, jeep: 300, size: "md" },
-
-		{ id: 5, title: "Полировка внутренних деталей салона", subtitle: "", light: 700, jeep: 700, size: "md" },
-		{ id: 6, title: "Полировка хрома", subtitle: "", light: 300, jeep: 300, size: "md" },
-	],
-
+		'Polishing 1',
+		'Polishing 2',
+		'Polishing 3',
+	]
 };
 
-const LeatherData = {
-	title: 'Restoration of the leather interior of the car',
-	video: skining_video,
+const CeramicCoatingData = {
+	title: "Ceramic Coating",
+	video: ceramic_video,
 	p: [
-		"Restoration of the leather interior of the car_1",
-		"Restoration of the leather interior of the car_2",
-		"Restoration of the leather interior of the car_3",
-		"Restoration of the leather interior of the car_4",
-	],
-	priceList: [
-		{ id: 1, title: "Уровень #1", subtitle: "крупнозер + мелкозерн + финиш", light: 1300, jeep: 2000, size: "sm" },
-		{ id: 2, title: "Уровень #2", subtitle: "мелкозерн + финиш", light: 800, jeep: 1300, size: "sm" },
+		'Ceramic Coating 1',
+		'Ceramic Coating 2',
+		'Ceramic Coating 3'
+	]
+};
 
-		{ id: 3, title: "Удаление царапин", subtitle: "", light: "200-500", jeep: "200-500", size: "md" },
-		{ id: 4, title: "Обработка наждаткой окраш поверх", subtitle: "", light: 300, jeep: 300, size: "md" },
-
-		{ id: 5, title: "Полировка внутренних деталей салона", subtitle: "", light: 700, jeep: 700, size: "md" },
-		{ id: 6, title: "Полировка хрома", subtitle: "", light: 300, jeep: 300, size: "md" },
-	],
-}
-
-const CersamicsgData = {
-	title: "Ceramics",
-	video: ceramicing_video,
+const WindowTintData = {
+	title: "Window Tint",
+	video: tint_video,
 	p: [
-		"Ceramics_1",
-	],
-	priceList: [
-		{ id: 1, title: "Уровень #1", subtitle: "крупнозер + мелкозерн + финиш", light: 1300, jeep: 2000, size: "sm" },
-		{ id: 2, title: "Уровень #2", subtitle: "мелкозерн + финиш", light: 800, jeep: 1300, size: "sm" },
+		'Window Tint 1',
+		'Window Tint 2',
+	]
+};
 
-		{ id: 3, title: "Удаление царапин", subtitle: "", light: "200-500", jeep: "200-500", size: "md" },
-		{ id: 4, title: "Обработка наждаткой окраш поверх", subtitle: "", light: 300, jeep: 300, size: "md" },
-
-		{ id: 5, title: "Полировка внутренних деталей салона", subtitle: "", light: 700, jeep: 700, size: "md" },
-		{ id: 6, title: "Полировка хрома", subtitle: "", light: 300, jeep: 300, size: "md" },
+const VinylData = {
+	title: "Pasting with vinyl and polyurethane films",
+	video: vinyl_video,
+	p: [
+		'Pasting with vinyl and polyurethane films 1',
+		'Pasting with vinyl and polyurethane films 2',
+		'Pasting with vinyl and polyurethane films 3',
 	],
 };
 
 const PDRData = {
-	title: "PDR-dent straightening without painting",
+	title: "Paintless Dent Repair",
 	video: pdr_video,
 	p: [
-		"PDR-dent straightening without painting_1",
-		"PDR-dent straightening without painting_2",
-	],
-	priceList: [
-		{ id: 1, title: "Уровень #1", subtitle: "крупнозер + мелкозерн + финиш", light: 1300, jeep: 2000, size: "sm" },
-		{ id: 2, title: "Уровень #2", subtitle: "мелкозерн + финиш", light: 800, jeep: 1300, size: "sm" },
-
-		{ id: 3, title: "Удаление царапин", subtitle: "", light: "200-500", jeep: "200-500", size: "md" },
-		{ id: 4, title: "Обработка наждаткой окраш поверх", subtitle: "", light: 300, jeep: 300, size: "md" },
-
-		{ id: 5, title: "Полировка внутренних деталей салона", subtitle: "", light: 700, jeep: 700, size: "md" },
-		{ id: 6, title: "Полировка хрома", subtitle: "", light: 300, jeep: 300, size: "md" },
-	],
+		'Paintless Dent Repair 1',
+		'Paintless Dent Repair 2',
+	]
 };
 
-const CleaningData = {
-	title: "Dry cleaning of the salon",
-	video: cleaning_video,
+const PaintingData = {
+	title: "Painting",
+	video: painting_video,
 	p: [
-		"Dry cleaning of the salon_1",
-		"Dry cleaning of the salon_2",
-		"Dry cleaning of the salon_3",
-	],
-	priceList: [
-		{ id: 1, title: "Уровень #1", subtitle: "крупнозер + мелкозерн + финиш", light: 1300, jeep: 2000, size: "sm" },
-		{ id: 2, title: "Уровень #2", subtitle: "мелкозерн + финиш", light: 800, jeep: 1300, size: "sm" },
-
-		{ id: 3, title: "Удаление царапин", subtitle: "", light: "200-500", jeep: "200-500", size: "md" },
-		{ id: 4, title: "Обработка наждаткой окраш поверх", subtitle: "", light: 300, jeep: 300, size: "md" },
-
-		{ id: 5, title: "Полировка внутренних деталей салона", subtitle: "", light: 700, jeep: 700, size: "md" },
-		{ id: 6, title: "Полировка хрома", subtitle: "", light: 300, jeep: 300, size: "md" },
-	],
+		'Painting 1',
+	]
 };
 
-const WashData = {
-	title: "Nanocarwash",
-	video: washing_video,
+const LeatherTrimmingData = {
+	title: 'Leather Trimming',
+	video: leather_video,
 	p: [
-		"Nanocarwash_1",
-		"Nanocarwash_2",
-	],
-	priceList: [
-		{ id: 1, title: "Уровень #1", subtitle: "крупнозер + мелкозерн + финиш", light: 1300, jeep: 2000, size: "sm" },
-		{ id: 2, title: "Уровень #2", subtitle: "мелкозерн + финиш", light: 800, jeep: 1300, size: "sm" },
+		'Leather Trimming 1',
+		'Leather Trimming 2',
+		'Leather Trimming 3',
+		'Leather Trimming 4',
+	]
+}
 
-		{ id: 3, title: "Удаление царапин", subtitle: "", light: "200-500", jeep: "200-500", size: "md" },
-		{ id: 4, title: "Обработка наждаткой окраш поверх", subtitle: "", light: 300, jeep: 300, size: "md" },
-
-		{ id: 5, title: "Полировка внутренних деталей салона", subtitle: "", light: 700, jeep: 700, size: "md" },
-		{ id: 6, title: "Полировка хрома", subtitle: "", light: 300, jeep: 300, size: "md" },
-	],
-};
-
-const FilmData = {
-	title: "Pasting with vinyl and polyurethane films",
-	video: filming_video,
+const DesignCustomData = {
+	title: "Design and Custom",
+	video: design_video,
 	p: [
-		"Pasting with vinyl and polyurethane films_1"
-	],
-	priceList: [
-		{ id: 1, title: "Уровень #1", subtitle: "крупнозер + мелкозерн + финиш", light: 1300, jeep: 2000, size: "sm" },
-		{ id: 2, title: "Уровень #2", subtitle: "мелкозерн + финиш", light: 800, jeep: 1300, size: "sm" },
-
-		{ id: 3, title: "Удаление царапин", subtitle: "", light: "200-500", jeep: "200-500", size: "md" },
-		{ id: 4, title: "Обработка наждаткой окраш поверх", subtitle: "", light: 300, jeep: 300, size: "md" },
-
-		{ id: 5, title: "Полировка внутренних деталей салона", subtitle: "", light: 700, jeep: 700, size: "md" },
-		{ id: 6, title: "Полировка хрома", subtitle: "", light: 300, jeep: 300, size: "md" },
-	],
-};
-
-const TintData = {
-	title: "Tinting",
-	video: filming_video,
-	p: [
-		"Tinting_1",
-		"Tinting_2"
-	],
-	priceList: [
-		{ id: 1, title: "Уровень #1", subtitle: "крупнозер + мелкозерн + финиш", light: 1300, jeep: 2000, size: "sm" },
-		{ id: 2, title: "Уровень #2", subtitle: "мелкозерн + финиш", light: 800, jeep: 1300, size: "sm" },
-
-		{ id: 3, title: "Удаление царапин", subtitle: "", light: "200-500", jeep: "200-500", size: "md" },
-		{ id: 4, title: "Обработка наждаткой окраш поверх", subtitle: "", light: 300, jeep: 300, size: "md" },
-
-		{ id: 5, title: "Полировка внутренних деталей салона", subtitle: "", light: 700, jeep: 700, size: "md" },
-		{ id: 6, title: "Полировка хрома", subtitle: "", light: 300, jeep: 300, size: "md" },
-	],
+		'Design and Custom 1',
+		'Design and Custom 2',
+		'Design and Custom 3',
+		'Design and Custom 4',
+		'Design and Custom 5',
+		'Design and Custom 6',
+		'Design and Custom 7',
+		'Design and Custom 8',
+		'Design and Custom 9',
+		'Design and Custom 10',
+	]
 };

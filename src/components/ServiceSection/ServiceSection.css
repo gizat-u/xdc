@@ -65,7 +65,7 @@
 	text-transform: uppercase;
 	font-weight: lighter;
 	/* font-size: 50px; */
-	font-size: clamp(20px, 30px, 40px);
+	font-size: clamp(30px, 55px, 70px);
 	margin-bottom: 0;
 	word-break: break-word;
 }

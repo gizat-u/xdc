@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { useTranslation } from "react-i18next";
+import { ServiceImages } from "../ServiceImages/ServiceImages";
 
 export const ServiceSection = ({ service }) => {
 
@@ -43,45 +44,7 @@ export const ServiceSection = ({ service }) => {
 						</button>
 					</motion.div>
 				</div>
-				<div
-					className="content_el"
-				>
-					<motion.div className="content_el_in" variants={animateDiv} initial="hidden" animate="visible" >
-						<div className="lines">
-							<div className="line">
-								<div>#</div>
-								<div>Наименование</div>
-								<div>
-									<div>Легковая</div>
-									<div>Джип</div>
-								</div>
-							</div>
-							{service.priceList.map(({ id, title, subtitle, light, jeep, size }) => {
-								return (
-									<div className="line" key={id}>
-										<div>{id}</div>
-										<div>
-											{title}
-											<span>
-												{subtitle}
-											</span>
-										</div>
-										{size === "md" ?
-											<div>
-												<div>{light}TL</div>
-											</div>
-											:
-											<div>
-												<div>{light}TL</div>
-												<div>{jeep}TL</div>
-											</div>
-										}
-									</div>
-								);
-							})}
-						</div>
-					</motion.div>
-				</div>
+				<ServiceImages service={service} />
 			</div>
 		</div>
 	);

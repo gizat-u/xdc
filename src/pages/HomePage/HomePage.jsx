@@ -31,7 +31,7 @@ export const HomePage = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
-			<BackgroundVideo video={video_background} blackout={false} />
+			<BackgroundVideo video={video_background} blackout={false} loop={false} />
 			<Explore />
 		</motion.main >
 	);

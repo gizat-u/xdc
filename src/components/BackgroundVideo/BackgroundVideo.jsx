@@ -2,7 +2,7 @@ import './BackgroundVideo.css';
 
 import { motion } from "framer-motion";
 
-export const BackgroundVideo = ({ video, blackout = true, image = false }) => {
+export const BackgroundVideo = ({ video, blackout = true, image = false, loop = true }) => {
 	const animateImg = {
 		hidden: {
 			height: 0,
@@ -22,7 +22,7 @@ export const BackgroundVideo = ({ video, blackout = true, image = false }) => {
 			{image ?
 				<img src={video} alt="image" />
 				:
-				<video autoPlay playsInline muted loop preload="true" >
+				<video autoPlay playsInline muted loop={loop} preload="true" >
 					<source src={video} type="video/mp4" />
 				</video>
 			}

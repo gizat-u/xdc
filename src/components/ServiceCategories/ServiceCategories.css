@@ -16,15 +16,18 @@
 
 .service_categories_content a {
 	align-items: center;
-	color: #fff;
+	color: rgb(212, 212, 212);
 	display: flex;
 	font-family: PhonkRegular, sans-serif;
 	font-size: 10px;
 	font-weight: 400;
 	justify-content: center;
 	letter-spacing: 1px;
+
 	margin: 15px 0;
 	padding: 10px;
+	font-size: 8.5px;
+
 	text-align: center;
 	text-transform: uppercase;
 	transition: all .35s;
