@@ -38,6 +38,12 @@
 	color: red;
 }
 
+@media (min-width: 150px) and (max-width: 768px) {
+	.service_categories {
+		display: none;
+	}
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
 	.service_categories_content {
 		width: 100%;

@@ -3,6 +3,7 @@ import "./ServicePage.css"
 import React from "react";
 
 import { useTitle } from "../../utilities/useTitle";
+import { useTranslation } from "react-i18next";
 
 import { motion } from "framer-motion";
 import { ServiceSection } from "../../components/ServiceSection/ServiceSection";
@@ -13,9 +14,10 @@ import { ServiceCategories } from "../../components/ServiceCategories/ServiceCat
 
 export const ServicePage = () => {
 
+	const { t } = useTranslation();
 	const service = detectService(window.location.pathname);
 
-	useTitle(service.title + " | XDC");
+	useTitle(t(service.title) + " | XDC");
 
 
 	return (

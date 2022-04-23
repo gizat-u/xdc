@@ -6,18 +6,14 @@ import { useState } from "react";
 
 export const ButtonLanguage = () => {
 
-	const [language, setLanguage] = useState('tr');
+	const [language, setLanguage] = useState('ru');
 
 	const toggleButtonLanguage = () => {
 
 
 		if (language === "en")
-			setLanguage("tr");
-		else if (language === "tr")
 			setLanguage("ru");
-		else if (language === "ru")
-			setLanguage("en");
-		else
+		if (language === "ru")
 			setLanguage("en");
 
 		i18next.changeLanguage(language);

@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { nav_links } from "../Header/HeaderData";
 import logo from "../../assets/images/logo.png";
 
+import { BsGeoAlt } from "react-icons/bs";
+
 export const ContactSection = () => {
 	const animateDiv = {
 		hidden: {
@@ -26,6 +28,9 @@ export const ContactSection = () => {
 				<div className="content_el">
 					<motion.div variants={animateDiv} initial="hidden" animate="visible" >
 						<img src={logo} alt="logo" />
+						<a href='https://goo.gl/maps/NKk4M1bRA1186GnG6' target="_blank" rel="noopener noreferrer">
+							<BsGeoAlt /> Google Maps
+						</a>
 						{nav_links.map(({ id, link, text, span }) => {
 							return (
 								<a key={id} href={link} target="_blank" rel="noopener noreferrer">

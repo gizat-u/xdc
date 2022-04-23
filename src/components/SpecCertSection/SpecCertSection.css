@@ -1,0 +1,80 @@
+.speccert_section {
+    display: flex;
+    width: 78%;
+    margin: auto;
+}
+
+.speccert_content {}
+
+.specialists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.specialists .specialist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    text-align: center;
+
+    transition: 0.35s all;
+
+    cursor: pointer;
+}
+
+.specialists .specialist:hover h3 {
+    color: red;
+}
+
+.specialists .specialist:hover img {
+    transform: scale(1.2);
+}
+
+.specialist_role {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.specialists .specialist img {
+    height: 300px;
+    transition: 0.35s all;
+}
+
+.specialists .specialist h3 {
+    color: #fff;
+    transition: 0.35s all;
+    text-transform: uppercase;
+    font-family: "PhonkRegular", sans-serif;
+    font-weight: lighter;
+    margin-top: -20px;
+
+}
+
+.certificates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.certificates .certificate {
+    display: flex;
+    flex-direction: column;
+    transition: 0.35s all;
+    cursor: pointer;
+}
+
+.certificates .certificate img {
+    height: 200px;
+    transition: 0.35s all;
+}
+
+.certificates .certificate:hover img {
+    transform: scale(1.1);
+}

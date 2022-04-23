@@ -185,19 +185,19 @@
 		width: 25%;
 	}
 
-	/* .service_section .content_el h2 {
-		font-size: 30px;
-	} */
+	.service_section .content_el h2 {
+		font-size: 35px;
+	}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-	/* .service_section .content_el h2 {
+	.service_section .content_el h2 {
 		font-size: 40px;
-	} */
+	}
 }
 
 @media (min-width: 1025px) {
-	/* .service_section .content_el h2 {
-		font-size: 4.7vmin;
-	} */
+	.service_section .content_el h2 {
+		font-size: 50px;
+	}
 }

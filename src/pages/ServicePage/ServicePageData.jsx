@@ -11,6 +11,48 @@ import tint_video from "../../assets/videos/tint.mp4";
 import painting_video from "../../assets/videos/painting.mp4";
 import design_video from "../../assets/videos/design.mp4";
 
+// Window Tint
+import window_tint_1 from "../../assets/images/slider/WindowTint1.png";
+import window_tint_2 from "../../assets/images/slider/WindowTint2.png";
+import window_tint_3 from "../../assets/images/slider/WindowTint3.png";
+// DryCleaning
+import dry_cleaning_1 from "../../assets/images/slider/DryCleaning1.png";
+import dry_cleaning_2 from "../../assets/images/slider/DryCleaning2.png";
+import dry_cleaning_3 from "../../assets/images/slider/DryCleaning3.png";
+// LeatherTrimming
+import leather_trimming_1 from "../../assets/images/slider/LeatherTrimming1.jpg";
+import leather_trimming_2 from "../../assets/images/slider/LeatherTrimming2.jpg";
+import leather_trimming_3 from "../../assets/images/slider/LeatherTrimming3.jpg";
+// DesginCustom
+import design_custom_1 from "../../assets/images/slider/DesignCustom1.jpg";
+import design_custom_2 from "../../assets/images/slider/DesignCustom2.jpg";
+import design_custom_3 from "../../assets/images/slider/DesignCustom3.jpg";
+// CarWashing
+import car_washing_1 from "../../assets/images/slider/CarWashing1.jpg";
+import car_washing_2 from "../../assets/images/slider/CarWashing3.jpg";
+import car_washing_3 from "../../assets/images/slider/CarWashing3.jpg";
+// import car_washing_4 from "../../assets/images/slider/CarWashing4.jpg";
+// Polishing
+import polishing_1 from "../../assets/images/slider/Polishing1.jpg";
+import polishing_2 from "../../assets/images/slider/Polishing2.jpg";
+import polishing_3 from "../../assets/images/slider/Polishing3.jpg";
+// Painting
+import painting_1 from "../../assets/images/slider/Painting1.jpg";
+import painting_2 from "../../assets/images/slider/Painting2.jpg";
+import painting_3 from "../../assets/images/slider/Painting3.jpg";
+// PDR
+import pdr_1 from "../../assets/images/slider/PDR1.jpg";
+import pdr_2 from "../../assets/images/slider/PDR2.jpg";
+import pdr_3 from "../../assets/images/slider/PDR3.jpg";
+// CeramicCoating1
+import ceramic_coating_1 from "../../assets/images/slider/CeramicCoating1.jpg";
+import ceramic_coating_2 from "../../assets/images/slider/CeramicCoating2.jpg";
+import ceramic_coating_3 from "../../assets/images/slider/CeramicCoating3.jpg";
+// import ceramic_coating_4 from "../../assets/images/slider/CeramicCoating4.jpg";
+// Vinyl
+import vinyl_1 from "../../assets/images/slider/Vinyl1.jpg";
+import vinyl_2 from "../../assets/images/slider/Vinyl2.jpg";
+import vinyl_3 from "../../assets/images/slider/Vinyl3.jpg";
 
 export const detectService = (path) => {
 
@@ -59,7 +101,10 @@ const CarWashingData = {
 		'Car Washing 1',
 		'Car Washing 2',
 		'Car Washing 3'
-	]
+	],
+	img_1: car_washing_1,
+	img_2: car_washing_2,
+	img_3: car_washing_3
 };
 
 const DryCleaningData = {
@@ -69,7 +114,10 @@ const DryCleaningData = {
 		'Dry Cleaning 1',
 		'Dry Cleaning 2',
 		'Dry Cleaning 3',
-	]
+	],
+	img_1: dry_cleaning_1,
+	img_2: dry_cleaning_2,
+	img_3: dry_cleaning_3
 };
 
 const PolishingData = {
@@ -79,7 +127,10 @@ const PolishingData = {
 		'Polishing 1',
 		'Polishing 2',
 		'Polishing 3',
-	]
+	],
+	img_1: polishing_1,
+	img_2: polishing_2,
+	img_3: polishing_3
 };
 
 const CeramicCoatingData = {
@@ -89,7 +140,10 @@ const CeramicCoatingData = {
 		'Ceramic Coating 1',
 		'Ceramic Coating 2',
 		'Ceramic Coating 3'
-	]
+	],
+	img_1: ceramic_coating_1,
+	img_2: ceramic_coating_2,
+	img_3: ceramic_coating_3
 };
 
 const WindowTintData = {
@@ -98,7 +152,10 @@ const WindowTintData = {
 	p: [
 		'Window Tint 1',
 		'Window Tint 2',
-	]
+	],
+	img_1: window_tint_1,
+	img_2: window_tint_2,
+	img_3: window_tint_3
 };
 
 const VinylData = {
@@ -109,6 +166,9 @@ const VinylData = {
 		'Pasting with vinyl and polyurethane films 2',
 		'Pasting with vinyl and polyurethane films 3',
 	],
+	img_1: vinyl_1,
+	img_2: vinyl_2,
+	img_3: vinyl_3
 };
 
 const PDRData = {
@@ -117,7 +177,10 @@ const PDRData = {
 	p: [
 		'Paintless Dent Repair 1',
 		'Paintless Dent Repair 2',
-	]
+	],
+	img_1: pdr_1,
+	img_2: pdr_2,
+	img_3: pdr_3
 };
 
 const PaintingData = {
@@ -125,7 +188,10 @@ const PaintingData = {
 	video: painting_video,
 	p: [
 		'Painting 1',
-	]
+	],
+	img_1: painting_1,
+	img_2: painting_2,
+	img_3: painting_3
 };
 
 const LeatherTrimmingData = {
@@ -136,7 +202,10 @@ const LeatherTrimmingData = {
 		'Leather Trimming 2',
 		'Leather Trimming 3',
 		'Leather Trimming 4',
-	]
+	],
+	img_1: leather_trimming_1,
+	img_2: leather_trimming_2,
+	img_3: leather_trimming_3
 }
 
 const DesignCustomData = {
@@ -153,5 +222,8 @@ const DesignCustomData = {
 		'Design and Custom 8',
 		'Design and Custom 9',
 		'Design and Custom 10',
-	]
+	],
+	img_1: design_custom_1,
+	img_2: design_custom_2,
+	img_3: design_custom_3
 };
