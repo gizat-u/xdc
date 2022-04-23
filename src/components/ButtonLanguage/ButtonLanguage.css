@@ -6,23 +6,24 @@
 
 	font-size: 12px;
 
-	position: fixed;
+	/* position: fixed;
 	left: 0;
-	bottom: 0;
+	bottom: 0; */
 
-	padding: 15px;
-	margin: 15px;
+	/* padding: 15px;
+	margin: 15px; */
+
 
 	text-transform: uppercase;
 
 	background-color: transparent;
-	border: 1px solid #fff;
 
 	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 	letter-spacing: 1px;
 
-	border-radius: 50%;
+	/* border-radius: 50%; */
+	border-radius: 1rem;
 	overflow: hidden;
 
 	color: #fff;

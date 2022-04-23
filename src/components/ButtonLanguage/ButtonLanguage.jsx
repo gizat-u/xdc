@@ -15,6 +15,8 @@ export const ButtonLanguage = () => {
 			setLanguage("tr");
 		else if (language === "tr")
 			setLanguage("ru");
+		else if (language === "ru")
+			setLanguage("en");
 		else
 			setLanguage("en");
 

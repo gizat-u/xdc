@@ -12,7 +12,7 @@ import logo from "../../assets/images/logo.png";
 import { useTranslation } from "react-i18next";
 
 
-export default function Header() {
+export default function Header({ ButtonLanguage }) {
 
 	const { t } = useTranslation();
 
@@ -65,6 +65,7 @@ export default function Header() {
 						})}
 					</div>
 					<div className="menu_links">
+						<ButtonLanguage />
 						{nav_links.map(({ id, link, text }) => {
 							return (
 								<a key={id} href={link} onClick={() => handleClickLink()} target="_blank" rel="noopener noreferrer">

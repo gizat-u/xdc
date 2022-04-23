@@ -37,6 +37,11 @@ export const ServiceSection = ({ service }) => {
 							</motion.p>
 						);
 					})}
+					<motion.div className="content_el_in" variants={animateDiv} initial="hidden" animate="visible" >
+						<button>
+							{t("Sign Up")}
+						</button>
+					</motion.div>
 				</div>
 				<div
 					className="content_el"
@@ -75,11 +80,6 @@ export const ServiceSection = ({ service }) => {
 								);
 							})}
 						</div>
-					</motion.div>
-					<motion.div className="content_el_in" variants={animateDiv} initial="hidden" animate="visible" >
-						<button>
-							{t("Sign Up")}
-						</button>
 					</motion.div>
 				</div>
 			</div>

@@ -11,7 +11,7 @@
 	flex-direction: row;
 	justify-content: space-around;
 	margin: auto;
-	width: 65%;
+	width: 80%;
 }
 
 .service_categories_content a {
@@ -32,4 +32,10 @@
 
 .service_categories_content a:hover {
 	color: red;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.service_categories_content {
+		width: 100%;
+	}
 }

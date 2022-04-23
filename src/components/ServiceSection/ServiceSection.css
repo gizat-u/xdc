@@ -1,5 +1,5 @@
 .service_section .content_el {
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-start;
 }
 
@@ -19,7 +19,7 @@
 	justify-content: space-around;
 	align-items: center;
 
-	width: 65%;
+	width: 80%;
 	margin: auto;
 }
 
@@ -94,7 +94,7 @@
 	background: transparent;
 	outline: none;
 	border: 1px solid #fff;
-	border-radius: 5px;
+	border-radius: 2rem;
 }
 
 .content_el_in button:hover {

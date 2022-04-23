@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import { ServicePage } from '../../pages/ServicePage/ServicePage';
 
 import { services } from '../../pages/ServicePage/ServicePageData';
+import { ContactPage } from '../../pages/ContactPage/ContactPage';
 
 const AppRouter = (props) => {
 
@@ -20,6 +21,8 @@ const AppRouter = (props) => {
 		>
 			<Routes location={location} key={location.pathname}>
 				<Route path='/' element={<HomePage />} />
+
+				<Route path='/contacts' element={<ContactPage />} />
 
 				{services.map(({ id, link, text }) => {
 					return (

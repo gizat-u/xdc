@@ -60,12 +60,12 @@ nav>div a:hover {
 
 .logo {
 	width: 30%;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .menu {
 	width: 70%;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .menu>div {
@@ -98,7 +98,7 @@ nav>div a:hover {
 	top: 0;
 	left: 0;
 	width: 100% !important;
-	background: rgba(0, 0, 0, 0.85);
+	background: rgba(0, 0, 0, 0.9);
 	bottom: 0;
 
 	transition: 0.35s all;
@@ -111,13 +111,19 @@ nav>div a:hover {
 
 .open .menu_items {
 	flex-direction: column;
+	width: 100%;
+}
+
+.open .menu_links {
+	width: 100%;
 }
 
 .open>div>a {
 	font-size: 20px;
-	margin: 30px 0;
-	padding: 30px;
+	margin: 20px 0;
+	padding: 25px 0;
 	text-align: center;
+	width: 100%;
 }
 
 
@@ -138,6 +144,10 @@ nav>div a:hover {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+	nav {
+		width: 100%;
+	}
+
 	.btn_menu {
 		display: none;
 	}
