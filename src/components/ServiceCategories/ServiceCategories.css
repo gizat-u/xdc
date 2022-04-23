@@ -38,9 +38,54 @@
 	color: red;
 }
 
+.services_list_btn {
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 15px;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	transition: 0.35s all;
+	width: 100%;
+
+	height: 35px;
+
+	z-index: 1000;
+}
+
+.service_categories .open {
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	padding-top: 120px;
+	height: auto;
+
+	overflow-y: auto;
+}
+
+.service_categories .open span {
+	width: 45%;
+	border: 1px solid #fff;
+}
+
+.service_categories .open span a {
+	padding: 0;
+}
+
 @media (min-width: 150px) and (max-width: 768px) {
-	.service_categories {
+	.service_categories_content {
 		display: none;
+	}
+
+	.services_list_btn {
+		display: flex;
 	}
 }
 
