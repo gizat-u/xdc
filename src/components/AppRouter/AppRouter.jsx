@@ -9,6 +9,7 @@ import { ServicePage } from '../../pages/ServicePage/ServicePage';
 
 import { services } from '../../pages/ServicePage/ServicePageData';
 import { ContactPage } from '../../pages/ContactPage/ContactPage';
+import { PricePage } from '../../pages/PricePage/PricePage';
 
 const AppRouter = (props) => {
 
@@ -23,6 +24,7 @@ const AppRouter = (props) => {
 				<Route path='/' element={<HomePage />} />
 
 				<Route path='/contacts' element={<ContactPage />} />
+				<Route path='/prices' element={<PricePage />} />
 
 				{services.map(({ id, link, text }) => {
 					return (

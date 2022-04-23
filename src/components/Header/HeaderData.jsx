@@ -4,7 +4,7 @@ import { AiOutlineInstagram, AiOutlineYoutube, AiOutlinePhone } from 'react-icon
 export const social_links = [
 	{ id: 1, link: "/", text: "Home" },
 	{ id: 2, link: "/", text: "Specialists & Certificates" },
-	{ id: 3, link: "/", text: "Prices" },
+	{ id: 3, link: "/prices", text: "Prices" },
 	{ id: 4, link: "/contacts", text: "Contacts" },
 ];
 
