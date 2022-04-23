@@ -40,3 +40,10 @@
     color: red;
     transform: scale(1.1);
 }
+
+@media (min-width: 150px) and (max-width: 768px) {
+    .content_el h1 {
+        font-size: 20px;
+        line-height: 2rem;
+    }
+}
