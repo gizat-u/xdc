@@ -63,7 +63,7 @@
 	letter-spacing: 1px;
 	font-family: "PhonkRegular", sans-serif;
 	text-transform: uppercase;
-	font-weight: 900;
+	font-weight: lighter;
 	/* font-size: 50px; */
 	font-size: clamp(20px, 30px, 40px);
 	margin-bottom: 0;

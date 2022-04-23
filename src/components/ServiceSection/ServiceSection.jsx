@@ -33,7 +33,7 @@ export const ServiceSection = ({ service }) => {
 					{service.p.map((pt) => {
 						return (
 							<motion.p key={pt} variants={animateDiv} initial="hidden" animate="visible" >
-								{pt}
+								{t(pt)}
 							</motion.p>
 						);
 					})}

@@ -6,7 +6,7 @@ import Header from './components/Header/Header';
 import i18n from "i18next";
 import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
-import { useTranslation, initReactI18next } from "react-i18next";
+import { initReactI18next } from "react-i18next";
 import { ButtonLanguage } from './components/ButtonLanguage/ButtonLanguage';
 
 i18n
@@ -14,7 +14,7 @@ i18n
 	.use(LanguageDetector)
 	.use(HttpApi)
 	.init({
-		supportedLngs: ["en", "tr"],
+		supportedLngs: ["en", "tr", "ru"],
 		fallbackLng: "en",
 		detection: {
 			order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
@@ -29,9 +29,6 @@ i18n
 	});
 
 function App() {
-
-	const { t } = useTranslation();
-
 	return (
 		<div className="App">
 			<Header />
