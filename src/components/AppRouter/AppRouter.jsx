@@ -7,7 +7,7 @@ import { HomePage } from '../../pages/HomePage/HomePage';
 import { AnimatePresence } from "framer-motion";
 import { ServicePage } from '../../pages/ServicePage/ServicePage';
 
-import { services } from '../ServiceSection/ServiceData';
+import { services } from '../../pages/ServicePage/ServicePageData';
 
 const AppRouter = (props) => {
 

@@ -4,11 +4,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
-import video_background from "../../assets/videos/explore.mp4";
+import { useTranslation } from "react-i18next";
 
-import { services } from "../ServiceSection/ServiceData";
+import { services } from "../../pages/ServicePage/ServicePageData";
 
 export const Explore = () => {
+
+	const { t } = useTranslation();
 
 	const animateH1 = {
 		hidden: {
@@ -40,11 +42,6 @@ export const Explore = () => {
 
 	return (
 		<div className="Component" >
-			<div className="section_background explore_background">
-				<video autoPlay playsInline muted preload="true">
-					<source src={video_background} type="video/mp4" />
-				</video>
-			</div>
 			<div className="section_content">
 				<div className="content_el">
 					<motion.h1 initial={"hidden"} animate={"visible"} transition={{ delay: 0.5, }} variants={animateH1} >
@@ -54,7 +51,7 @@ export const Explore = () => {
 						return (
 							<motion.span key={id} variants={animateServices} initial="hidden" animate="visible" custom={id}>
 								<Link to={link} >
-									{text}
+									{t(text)}
 								</Link>
 							</motion.span>
 						);

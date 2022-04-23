@@ -2,28 +2,30 @@ import './App.css';
 
 import AppRouter from './components/AppRouter/AppRouter';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import MultiLang from './components/MultiLang/MultiLang';
 
 import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
+import { useTranslation, initReactI18next } from "react-i18next";
+import { ButtonLanguage } from './components/ButtonLanguage/ButtonLanguage';
 
 i18n
-	.use(initReactI18next) // passes i18n down to react-i18next
+	.use(initReactI18next)
 	.use(LanguageDetector)
 	.use(HttpApi)
 	.init({
+		supportedLngs: ["en", "tr"],
 		fallbackLng: "en",
 		detection: {
-			order: ['htmlTag', 'cookie', 'localStorage', 'path', 'subdomain'],
-			caches: ['cookie',]
+			order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
+			caches: ['cookie'],
 		},
 		backend: {
-			loadPath: '/assets/locales/{{lng}}/translation.json',
+			loadPath: "/assets/locales/{{lng}}.json",
 		},
-		react: { useSuspense: false },
+		react: {
+			useSuspense: false,
+		},
 	});
 
 function App() {
@@ -32,11 +34,9 @@ function App() {
 
 	return (
 		<div className="App">
-			{/* <h2>{t('welcome_to_react')}</h2>; */}
 			<Header />
 			<AppRouter />
-			<Footer />
-			{/* <MultiLang /> */}
+			<ButtonLanguage />
 		</div>
 	);
 }

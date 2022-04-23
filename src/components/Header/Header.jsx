@@ -3,13 +3,19 @@ import "./Header.css"
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-import { AiOutlineInstagram, AiOutlineYoutube, AiOutlinePhone, AiOutlineMenu } from 'react-icons/ai';
+import { social_links, nav_links } from "./HeaderData";
+
+import { AiOutlineMenu } from 'react-icons/ai';
 import { FaTimes } from 'react-icons/fa';
+import logo from "../../assets/images/logo.png";
 
-import logo from "../../assets/images/logo.png"
+import { useTranslation } from "react-i18next";
 
-export default function Header()
-{
+
+export default function Header() {
+
+	const { t } = useTranslation();
+
 	const [menu, setMenu] = useState(false);
 	const [width, setWidth] = useState(window.innerWidth);
 
@@ -20,7 +26,7 @@ export default function Header()
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
 	}, [width]);
-	
+
 	const menuToggleHandler = () => {
 		setMenu((p) => !p);
 	}
@@ -31,7 +37,7 @@ export default function Header()
 
 	useEffect(() => {
 		width >= 768 && setMenu(false);
-	},[width]);
+	}, [width]);
 
 	return (
 		<header>
@@ -42,34 +48,30 @@ export default function Header()
 					</Link>
 				</div>
 				<button className="btn_menu" onClick={() => menuToggleHandler()}>
-					{menu ? 
+					{menu ?
 						<FaTimes color="red" />
 						:
 						<AiOutlineMenu />
 					}
 				</button>
-				<div className={`menu ${menu ? 'open' : '' } `}>
+				<div className={`menu ${menu ? 'open' : ''} `}>
 					<div className="menu_items">
-						<Link to="/" onClick={() => handleClickLink()}>
-							Home
-						</Link>
-						<Link to="/" onClick={() => handleClickLink()}>
-							Specialists & Certificates
-						</Link>
-						<Link to="/" onClick={() => handleClickLink()}>
-							Contacts
-						</Link>
+						{social_links.map(({ id, link, text }) => {
+							return (
+								<Link key={id} to={link} onClick={() => handleClickLink()}>
+									{t(text)}
+								</Link>
+							);
+						})}
 					</div>
 					<div className="menu_links">
-						<Link to="/" onClick={() => handleClickLink()}>
-							<AiOutlineInstagram />	
-						</Link>
-						<Link to="/" onClick={() => handleClickLink()}>
-							<AiOutlineYoutube />
-						</Link>
-						<Link to="/" onClick={() => handleClickLink()}>
-							<AiOutlinePhone />
-						</Link>
+						{nav_links.map(({ id, link, text }) => {
+							return (
+								<a key={id} href={link} onClick={() => handleClickLink()} target="_blank" rel="noopener noreferrer">
+									{text}
+								</a>
+							);
+						})}
 					</div>
 				</div>
 			</nav>

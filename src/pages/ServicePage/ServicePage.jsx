@@ -6,11 +6,17 @@ import { useTitle } from "../../utilities/useTitle";
 
 import { motion } from "framer-motion";
 import { ServiceSection } from "../../components/ServiceSection/ServiceSection";
+import { services, detectService } from "./ServicePageData";
+import { BackgroundVideo } from "../../components/BackgroundVideo/BackgroundVideo";
+import { ServiceCategories } from "../../components/ServiceCategories/ServiceCategories";
 
 
 export const ServicePage = () => {
 
-	useTitle("Service | XDC");
+	const service = detectService(window.location.pathname);
+
+	useTitle(service.title + " | XDC");
+
 
 	return (
 		<motion.main
@@ -29,7 +35,9 @@ export const ServicePage = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
-			<ServiceSection />
+			<BackgroundVideo video={service.video} />
+			<ServiceCategories services={services} />
+			<ServiceSection service={service} />
 		</motion.main>
 	);
 }
