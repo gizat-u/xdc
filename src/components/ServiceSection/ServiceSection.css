@@ -1,5 +1,5 @@
 .service_section .content_el {
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: flex-start;
 }
 
@@ -64,7 +64,8 @@
 	font-family: "PhonkRegular", sans-serif;
 	text-transform: uppercase;
 	font-weight: 900;
-	font-size: 50px;
+	/* font-size: 50px; */
+	font-size: clamp(20px, 30px, 40px);
 	margin-bottom: 0;
 	word-break: break-word;
 }
@@ -182,4 +183,20 @@
 	.line>div:nth-child(2n) {
 		width: 25%;
 	}
+
+	/* .service_section .content_el h2 {
+		font-size: 30px;
+	} */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	/* .service_section .content_el h2 {
+		font-size: 40px;
+	} */
+}
+
+@media (min-width: 1025px) {
+	/* .service_section .content_el h2 {
+		font-size: 4.7vmin;
+	} */
 }

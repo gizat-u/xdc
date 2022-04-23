@@ -94,12 +94,14 @@ nav>div a:hover {
 	align-items: center;
 
 	position: fixed;
-	height: 100vh;
+	height: 100vh !important;
 	top: 0;
 	left: 0;
 	width: 100% !important;
 	background: rgba(0, 0, 0, 0.85);
 	bottom: 0;
+
+	transition: 0.35s all;
 }
 
 .open a {
@@ -126,7 +128,7 @@ nav>div a:hover {
 
 	.menu {
 		display: none;
-		width: 0;
+		height: 0;
 	}
 
 	.menu a {

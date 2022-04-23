@@ -1,35 +1,35 @@
 .service_categories {
-    background-color: rgba(0, 0, 0, .35);
-    display: flex;
-    width: 100%;
-    z-index: 90;
+	background-color: rgba(0, 0, 0, .35);
+	display: flex;
+	width: 100%;
+	z-index: 90;
 }
 
 .service_categories_content {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
-    width: 65%;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: auto;
+	width: 65%;
 }
 
 .service_categories_content a {
-    align-items: center;
-    color: #fff;
-    display: flex;
-    font-family: PhonkRegular, sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    justify-content: center;
-    letter-spacing: 1px;
-    margin: 15px 0;
-    padding: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all .35s;
+	align-items: center;
+	color: #fff;
+	display: flex;
+	font-family: PhonkRegular, sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	justify-content: center;
+	letter-spacing: 1px;
+	margin: 15px 0;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: all .35s;
 }
 
 .service_categories_content a:hover {
-    color: red;
+	color: red;
 }
