@@ -1,5 +1,5 @@
 .service_section .content_el {
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: flex-start;
 }
 
@@ -56,7 +56,7 @@
 .service_section .content_el:nth-child(2) {
 	width: 45%;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 }
 
 .service_section .content_el h2 {

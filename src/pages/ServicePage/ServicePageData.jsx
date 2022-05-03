@@ -29,7 +29,7 @@ import design_custom_2 from "../../assets/images/slider/DesignCustom2.jpg";
 import design_custom_3 from "../../assets/images/slider/DesignCustom3.jpg";
 // CarWashing
 import car_washing_1 from "../../assets/images/slider/CarWashing1.jpg";
-import car_washing_2 from "../../assets/images/slider/CarWashing3.jpg";
+import car_washing_2 from "../../assets/images/slider/CarWashing2.jpg";
 import car_washing_3 from "../../assets/images/slider/CarWashing3.jpg";
 // import car_washing_4 from "../../assets/images/slider/CarWashing4.jpg";
 // Polishing

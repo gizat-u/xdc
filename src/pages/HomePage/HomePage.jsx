@@ -1,6 +1,6 @@
 import "./HomePage.css"
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { useTitle } from "../../utilities/useTitle";
 
@@ -13,6 +13,17 @@ import video_background from "../../assets/videos/explore.mp4";
 
 export const HomePage = () => {
 	useTitle("X Detailing Center | XDC");
+
+	const [show, setShow] = useState(false)
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setShow(true)
+		}, 5000)
+
+		return () => clearTimeout(timeout)
+
+	}, [show])
 
 	return (
 		<motion.main
@@ -32,7 +43,13 @@ export const HomePage = () => {
 			}}
 		>
 			<BackgroundVideo video={video_background} blackout={false} loop={false} />
-			<Explore />
+			{
+				(show) ?
+					<Explore />
+					:
+					""
+			}
+			{/* <Explore /> */}
 		</motion.main >
 	);
 }
