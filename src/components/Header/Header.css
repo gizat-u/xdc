@@ -101,11 +101,11 @@ nav .active {
 .open {
 	display: flex !important;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 
 	position: fixed;
-	height: 100vh !important;
+	height: 100% !important;
 	top: 0;
 	left: 0;
 	width: 100% !important;
@@ -129,10 +129,11 @@ nav .active {
 	width: 100%;
 }
 
-.open>div>a {
-	font-size: 20px;
-	margin: 20px 0;
-	padding: 25px 0;
+.open>div>a,
+.open>div>button {
+	/* font-size: 1px; */
+	margin: 10px 0;
+	padding: 15px 0;
 	text-align: center;
 	width: 100%;
 }
