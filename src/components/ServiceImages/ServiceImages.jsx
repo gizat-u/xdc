@@ -31,7 +31,6 @@ export const ServiceImages = ({ service }) => {
 			<Swiper
 				effect={"cube"}
 				grabCursor={true}
-				loop={true}
 				autoplay={{
 					delay: 2000,
 					disableOnInteraction: false,
