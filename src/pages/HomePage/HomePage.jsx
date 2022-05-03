@@ -6,9 +6,7 @@ import { useTitle } from "../../utilities/useTitle";
 
 import { motion } from "framer-motion";
 import { Explore } from "../../components/Explore/Explore";
-import { services } from "../ServicePage/ServicePageData";
 import { BackgroundVideo } from "../../components/BackgroundVideo/BackgroundVideo";
-import { ServiceCategories } from "../../components/ServiceCategories/ServiceCategories";
 
 import video_background from "../../assets/videos/explore.mp4";
 

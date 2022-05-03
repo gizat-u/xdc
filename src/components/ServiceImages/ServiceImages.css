@@ -4,6 +4,7 @@
 	height: auto;
 	border-radius: 3px;
 	overflow: hidden;
+	position: relative;
 	/* height: 320px; */
 }
 
@@ -12,7 +13,12 @@
 	color: red !important;
 }
 
-.swiper-pagination-bullet-active-main {
+
+.swiper-scrollbar {
+	background: #cdcdcd;
+}
+
+.swiper-scrollbar-drag {
 	background-color: red !important;
 }
 
