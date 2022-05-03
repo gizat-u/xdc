@@ -8,17 +8,6 @@
 	/* height: 320px; */
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-	color: red !important;
-}
-
-
-.swiper-pagination-bullet {
-	background: rgba(255, 255, 255, 0.7);
-	opacity: none;
-}
-
 .swiper-pagination-bullet-active {
 	background-color: red !important;
 }
