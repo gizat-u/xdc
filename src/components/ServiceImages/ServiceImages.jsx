@@ -6,8 +6,9 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cube";
+import "swiper/css/pagination";
 
-import { Autoplay, EffectCube } from "swiper";
+import { Autoplay, EffectCube, Pagination } from "swiper";
 
 export const ServiceImages = ({ service }) => {
 
@@ -31,6 +32,9 @@ export const ServiceImages = ({ service }) => {
 			<Swiper
 				effect={"cube"}
 				grabCursor={true}
+				pagination={{
+					dynamicBullets: true,
+				}}
 				autoplay={{
 					delay: 2000,
 					disableOnInteraction: false,
@@ -41,7 +45,7 @@ export const ServiceImages = ({ service }) => {
 					shadowOffset: 20,
 					shadowScale: 0.94,
 				}}
-				modules={[Autoplay, EffectCube]}
+				modules={[Autoplay, EffectCube, Pagination]}
 				className="mySwiper"
 			>
 				<SwiperSlide><img src={service.img_1} alt="service" /></SwiperSlide>
