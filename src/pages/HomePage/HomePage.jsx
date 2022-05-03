@@ -6,7 +6,9 @@ import { useTitle } from "../../utilities/useTitle";
 
 import { motion } from "framer-motion";
 import { Explore } from "../../components/Explore/Explore";
+import { services } from "../ServicePage/ServicePageData";
 import { BackgroundVideo } from "../../components/BackgroundVideo/BackgroundVideo";
+import { ServiceCategories } from "../../components/ServiceCategories/ServiceCategories";
 
 import video_background from "../../assets/videos/explore.mp4";
 
@@ -19,7 +21,7 @@ export const HomePage = () => {
 	useEffect(() => {
 		const timeout = setTimeout(() => {
 			setShow(true)
-		}, 5000)
+		}, 5700)
 
 		return () => clearTimeout(timeout)
 
@@ -43,6 +45,8 @@ export const HomePage = () => {
 			}}
 		>
 			<BackgroundVideo video={video_background} blackout={false} loop={false} />
+			<ServiceCategories services={services} path={window.location.pathname} />
+
 			{
 				(show) ?
 					<Explore />

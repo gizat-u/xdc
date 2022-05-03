@@ -42,6 +42,10 @@
 }
 
 @media (min-width: 150px) and (max-width: 768px) {
+    .mobile-list-hide {
+        display: none;
+    }
+
     .content_el h1 {
         font-size: 20px;
         line-height: 2rem;

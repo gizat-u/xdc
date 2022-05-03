@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-creative";
-import { Autoplay, EffectCreative } from "swiper";
+import "swiper/css/effect-cube";
+
+import { Autoplay, EffectCube } from "swiper";
 
 export const ServiceImages = ({ service }) => {
 
@@ -28,23 +29,20 @@ export const ServiceImages = ({ service }) => {
 
 		<motion.div className="content_el" variants={animateDiv} initial="hidden" animate="visible" >
 			<Swiper
-				effect={"cards"}
+				effect={"cube"}
 				grabCursor={true}
 				loop={true}
 				autoplay={{
-					delay: 2500,
+					delay: 2000,
 					disableOnInteraction: false,
 				}}
-				creativeEffect={{
-					prev: {
-						shadow: true,
-						translate: [0, 0, -400],
-					},
-					next: {
-						translate: ["100%", 0, 0],
-					},
+				cubeEffect={{
+					shadow: true,
+					slideShadows: true,
+					shadowOffset: 20,
+					shadowScale: 0.94,
 				}}
-				modules={[Autoplay, EffectCreative]}
+				modules={[Autoplay, EffectCube]}
 				className="mySwiper"
 			>
 				<SwiperSlide><img src={service.img_1} alt="service" /></SwiperSlide>
