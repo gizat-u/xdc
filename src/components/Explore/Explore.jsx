@@ -49,7 +49,7 @@ export const Explore = () => {
 					</motion.h1>
 					{services.map(({ id, link, text }) => {
 						return (
-							<motion.span key={id} variants={animateServices} className="mobile-list-hide" initial="hidden" animate="visible" custom={id}>
+							<motion.span key={id} variants={animateServices} initial="hidden" animate="visible" custom={id}>
 								<Link to={link} >
 									{t(text)}
 								</Link>

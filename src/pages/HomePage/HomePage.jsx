@@ -45,7 +45,6 @@ export const HomePage = () => {
 			}}
 		>
 			<BackgroundVideo video={video_background} blackout={false} loop={false} />
-			<ServiceCategories services={services} path={window.location.pathname} />
 
 			{
 				(show) ?
