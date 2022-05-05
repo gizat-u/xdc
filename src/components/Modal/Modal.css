@@ -1,0 +1,9 @@
+.modal {
+	display: none;
+}
+
+.modal>form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}

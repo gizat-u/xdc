@@ -42,7 +42,7 @@ export const ServiceCategories = ({ services, path }) => {
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: i * 0.15,
+				delay: i * 0.1,
 			}
 		})
 	}

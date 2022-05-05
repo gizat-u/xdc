@@ -1,4 +1,8 @@
 {
+	"Car": "Car",
+	"Detaling": "Detaling",
+	"and customizing": "and customizing",
+	"services": "services",
 	"Home": "Home",
 	"Specialists & Certificates": "Specialists & Certificates",
 	"Pricess": "Prices",
@@ -58,5 +62,9 @@
 	"Design and Custom 7": "• change the body parts, ",
 	"Design and Custom 8": "• work with the car frame, ",
 	"Design and Custom 9": "• replace serial units, assemblies and joints with specialized ones, ",
-	"Design and Custom 10": "and of course chip-tuning which will increase the power and speed characteristics of your car!"
+	"Design and Custom 10": "and of course chip-tuning which will increase the power and speed characteristics of your car!",
+	"12": "",
+	"Key specialists": "Key specialists in all areas of XDC activity",
+	"RAMIZ OSMANLI": "RAMIZ OSMANLI",
+	"AHMED KHALILOV": "AHMED KHALILOV"
 }

@@ -35,7 +35,7 @@ export const Explore = () => {
 			opacity: 1,
 			x: 0,
 			transition: {
-				delay: i * 0.3,
+				delay: i * 0.1,
 			}
 		})
 	}
@@ -45,7 +45,7 @@ export const Explore = () => {
 			<div className="section_content">
 				<div className="content_el">
 					<motion.h1 initial={"hidden"} animate={"visible"} transition={{ delay: 0.5, }} variants={animateH1} >
-						Car <b>Detaling</b><br /> and customizing <br /> services
+						{t('Car')} <b>{t('Detaling')}</b><br /> {t('and customizing')} <br /> {t('services')}
 					</motion.h1>
 					{services.map(({ id, link, text }) => {
 						return (

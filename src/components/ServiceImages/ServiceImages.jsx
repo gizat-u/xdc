@@ -32,9 +32,10 @@ export const ServiceImages = ({ service }) => {
 			<Swiper
 				effect={"cube"}
 				grabCursor={true}
+				loop={true}
 				pagination={true}
 				autoplay={{
-					delay: 2000,
+					delay: 2500,
 					disableOnInteraction: false,
 				}}
 				cubeEffect={{

@@ -19,7 +19,7 @@ export const HomePage = () => {
 	useEffect(() => {
 		const timeout = setTimeout(() => {
 			setShow(true)
-		}, 5700)
+		}, 5250)
 
 		return () => clearTimeout(timeout)
 

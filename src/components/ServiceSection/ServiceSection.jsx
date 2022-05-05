@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ServiceImages } from "../ServiceImages/ServiceImages";
 
+import Modal from "../Modal/Modal";
+
 export const ServiceSection = ({ service }) => {
 
 	const { t } = useTranslation();
@@ -38,11 +40,7 @@ export const ServiceSection = ({ service }) => {
 							</motion.p>
 						);
 					})}
-					<motion.div className="content_el_in" variants={animateDiv} initial="hidden" animate="visible" >
-						<button>
-							{t("Sign Up")}
-						</button>
-					</motion.div>
+					<Modal type_service={service.title} />
 				</div>
 				<ServiceImages service={service} />
 			</div>

@@ -40,15 +40,15 @@ export const SpecCertSection = () => {
 						<div className="specialists">
 							<div className="specialist">
 								<img src={ramiz} alt="..." />
-								<h3>Ramiz Osmanli</h3>
+								<h3>{t('RAMIZ OSMANLI')}</h3>
 							</div>
 							<div className="specialist">
 								<img src={ahmed} alt="..." />
-								<h3>Ahmed Khalilov</h3>
+								<h3>{t('AHMED KHALILOV')}</h3>
 							</div>
 						</div>
 						<div className="specialist_role">
-							<span>Основные специалисты по всем направлениям дятельности XDC</span>
+							<span>{t('Key specialists')}</span>
 						</div>
 					</motion.div>
 					<motion.div variants={animateDiv} initial="hidden" animate="visible" >
