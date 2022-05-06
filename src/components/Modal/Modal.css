@@ -1,9 +1,75 @@
-.modal {
-	display: none;
+.modal_in {
+	z-index: 999;
 }
 
-.modal>form {
+.modal {
+	display: none;
+
+	background-color: rgba(0, 0, 0, 0.9) !important;
+	z-index: 9;
+}
+
+.modal_inner {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	padding: 0.5rem 2rem;
+
+	border-radius: 0.15rem;
+	background-color: rgba(215, 215, 215, 0.8);
+}
+
+.modal_title h3 {
+	font-family: 'PhonkRegular', sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #000;
+}
+
+.modal_item {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+
+	width: 100%;
+}
+
+.modal_item input {
+	padding: 15px;
+	width: 100%;
+	border: none;
+	border-radius: 0.5rem;
+}
+
+.modal_checkbox {
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+	justify-content: flex-start;
+}
+
+.modal_checkbox input {
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	width: auto;
+}
+
+.modal_checkbox label {
+	/* position: absolute; */
+	text-transform: uppercase;
+	color: #000;
+	font-weight: bold;
+	margin-left: 7%;
+	font-size: 12px;
+	/* right: 0; */
+}
+
+.modal_item button {
+	padding: 10px;
+	color: #000;
+	border: none;
+	outline: none;
+	background-color: #fff;
+	width: 100%;
+	border-radius: 0.5rem;
 }
