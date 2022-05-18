@@ -42,7 +42,7 @@ export const ServiceSection = ({ service }) => {
 					})}
 					<Modal type_service={service.title} />
 				</div>
-				<ServiceImages service={service} />
+				<ServiceImages className="wow" service={service} />
 			</div>
 		</div>
 	);

@@ -85,7 +85,7 @@
     .speccert_content .content_el>div,
     .specialists,
     .certificates {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 

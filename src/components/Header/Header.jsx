@@ -42,11 +42,6 @@ export default function Header({ ButtonLanguage }) {
 	return (
 		<header>
 			<nav>
-				<div className="logo">
-					<Link to="/" onClick={() => handleClickLink()}>
-						<img src={logo} alt="logotye" />
-					</Link>
-				</div>
 				<button className="btn_menu" onClick={() => menuToggleHandler()}>
 					{menu ?
 						<FaTimes color="red" />
@@ -54,6 +49,11 @@ export default function Header({ ButtonLanguage }) {
 						<AiOutlineMenu />
 					}
 				</button>
+				<div className="logo">
+					<Link to="/" onClick={() => handleClickLink()}>
+						<img src={logo} alt="logotye" />
+					</Link>
+				</div>
 				<div className={`menu ${menu ? 'open' : ''} `}>
 					<div className="menu_items">
 						{social_links.map(({ id, link, text }) => {

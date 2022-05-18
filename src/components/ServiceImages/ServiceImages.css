@@ -31,6 +31,10 @@
 	.swiper {
 		width: 100%;
 	}
+
+	.service_images {
+		display: none;
+	}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {}

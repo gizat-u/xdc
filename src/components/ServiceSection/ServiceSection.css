@@ -186,7 +186,22 @@
 	}
 
 	.service_section .content_el h2 {
-		font-size: 33px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		font-size: 25px;
+		text-align: center;
+	}
+
+	.content_el button {
+		font-family: "PhonkRegular", sans-serif;
+		background: #C4C4C4;
+		color: black;
+		font-weight: lighter;
+		width: 100%;
+		font-size: 20px;
+		margin: 15px 0;
 	}
 }
 

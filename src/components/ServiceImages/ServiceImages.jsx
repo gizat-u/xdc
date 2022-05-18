@@ -28,7 +28,7 @@ export const ServiceImages = ({ service }) => {
 	}
 	return (
 
-		<motion.div className="content_el" variants={animateDiv} initial="hidden" animate="visible" >
+		<motion.div className="content_el service_images" variants={animateDiv} initial="hidden" animate="visible" >
 			<Swiper
 				effect={"cube"}
 				grabCursor={true}

@@ -88,6 +88,10 @@
 	.services_list_btn {
 		display: flex;
 	}
+
+	.service_categories {
+		z-index: 2;
+	}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
