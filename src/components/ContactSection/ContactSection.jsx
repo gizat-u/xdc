@@ -3,7 +3,7 @@ import "./ContactSection.css"
 import React from "react";
 import { motion } from "framer-motion";
 
-import { nav_links } from "../Header/HeaderData";
+import { nav_links } from "../../data/Links";
 import logo from "../../assets/images/logo.png";
 
 import { BsGeoAlt } from "react-icons/bs";

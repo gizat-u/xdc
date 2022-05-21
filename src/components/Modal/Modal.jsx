@@ -28,18 +28,40 @@ export default function Modal({ type_service }) {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs.sendForm('service_099vb0n', 'template_fowcwqe', form.current, 'uPB51jN-5Gnk8oGGj')
-			.then((result) => {
-				console.log(result.text);
-				swal("You have signed up", "", "success");
-				setModal((p) => !p);
-				e.target.reset();
-			}, (error) => {
-				console.log(error.text);
-				swal("Error", error.text, "error");
-				setModal((p) => !p);
-				e.target.reset();
-			});
+
+		if (form.current.user_name.value.length <= 2) {
+			form.current.user_name.style.border = '2px solid red';
+			swal("Name is required", "", "error");
+		}
+		else if (form.current.user_phone.value.length <= 10) {
+			form.current.user_name.style.border = 'none';
+			form.current.user_phone.style.border = '2px solid red';
+			form.current.message.style.border = 'none';
+			swal("Phone is required", "", "error");
+		}
+		else if (form.current.message.value.length <= 4) {
+			form.current.user_name.style.border = 'none';
+			form.current.user_phone.style.border = 'none';
+			form.current.message.style.border = '2px solid red';
+			swal("Vehicle modle and number is required", "", "error");
+		}
+		else {
+			form.current.user_name.style.border = 'none';
+			form.current.user_phone.style.border = 'none';
+			form.current.message.style.border = 'none';
+			emailjs.sendForm('service_099vb0n', 'template_fowcwqe', form.current, 'uPB51jN-5Gnk8oGGj')
+				.then((result) => {
+					console.log(result.text);
+					swal("You have signed up", "", "success");
+					setModal((p) => !p);
+					e.target.reset();
+				}, (error) => {
+					console.log(error.text);
+					swal("Error", error.text, "error");
+					setModal((p) => !p);
+					e.target.reset();
+				});
+		}
 	};
 
 

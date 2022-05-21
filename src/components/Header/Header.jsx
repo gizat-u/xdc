@@ -3,7 +3,7 @@ import "./Header.css"
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-import { social_links, nav_links } from "./HeaderData";
+import { social_links, nav_links } from "../../data/Links";
 
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FaTimes } from 'react-icons/fa';

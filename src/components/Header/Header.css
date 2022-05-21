@@ -134,8 +134,8 @@ nav .active {
 	/* font-size: 1px; */
 	margin: 10px 0;
 	padding: 15px 0;
-	text-align: left;
-	justify-content: flex-start;
+	text-align: center;
+	justify-content: center;
 	width: 100%;
 }
 

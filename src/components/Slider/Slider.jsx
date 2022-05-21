@@ -1,16 +1,16 @@
-import "./ServiceImages.css"
+import "./Slider.css"
 
 import React from "react";
 import { motion } from "framer-motion";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 
 import { Autoplay, EffectCube, Pagination } from "swiper";
 
-export const ServiceImages = ({ service }) => {
+export const Slider = ({ children }) => {
 
 
 	const animateDiv = {
@@ -47,9 +47,7 @@ export const ServiceImages = ({ service }) => {
 				modules={[Autoplay, EffectCube, Pagination]}
 				className="mySwiper"
 			>
-				<SwiperSlide><img src={service.img_1} alt="service" /></SwiperSlide>
-				<SwiperSlide><img src={service.img_2} alt="service" /></SwiperSlide>
-				<SwiperSlide><img src={service.img_3} alt="service" /></SwiperSlide>
+				{children}
 			</Swiper>
 		</motion.div>
 	);

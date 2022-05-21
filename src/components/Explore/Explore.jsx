@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import { useTranslation } from "react-i18next";
 
-import { services } from "../../pages/ServicePage/ServicePageData";
+import { services } from "../../data/Services";
 
 export const Explore = () => {
 

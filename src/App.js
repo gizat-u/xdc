@@ -1,13 +1,13 @@
 import './App.css';
 
-import AppRouter from './components/AppRouter/AppRouter';
+import AppRouter from './components/AppRouter';
 import Header from './components/Header/Header';
 
 import i18n from "i18next";
 import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
-import { ButtonLanguage } from './components/ButtonLanguage/ButtonLanguage';
+import { ButtonLanguage } from './components/ButtonLanguage';
 
 i18n
 	.use(initReactI18next)

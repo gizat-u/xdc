@@ -8,7 +8,9 @@
 
 	overflow: hidden;
 
-	background-color: rgb(0, 0, 0);
+	/* background-color: rgb(0, 0, 0); */
+	background: linear-gradient(90deg, rgba(2, 1, 2, 1) 0%, rgba(22, 20, 22, 1) 35%, rgba(22, 20, 22, 1) 66%, rgba(2, 1, 2, 1) 100%);
+
 
 	min-height: 91vh;
 	padding-top: 75px;
@@ -68,11 +70,15 @@ a {
 @media (min-width: 150px) and (max-width: 768px) {
 	.section_content {
 		width: 78%;
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 
 	.content_el {
 		width: 100% !important;
+	}
+
+	.Page {
+		min-height: 91vh;
 	}
 }
 

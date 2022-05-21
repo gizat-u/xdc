@@ -1,8 +1,8 @@
-import './BackgroundVideo.css';
+import './Background.css';
 
 import { motion } from "framer-motion";
 
-export const BackgroundVideo = ({ video, blackout = true, image = false, loop = true }) => {
+export const Background = ({ video, blackout = true, image = false, loop = true }) => {
 
 	const animateImg = {
 		hidden: {

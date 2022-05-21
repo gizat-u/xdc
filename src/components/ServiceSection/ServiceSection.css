@@ -185,6 +185,13 @@
 		width: 25%;
 	}
 
+	.content_el_in button {
+		width: 100%;
+		background-color: #C4C4C4;
+		color: #000;
+		font-size: 20px;
+	}
+
 	.service_section .content_el h2 {
 		display: flex;
 		align-items: center;

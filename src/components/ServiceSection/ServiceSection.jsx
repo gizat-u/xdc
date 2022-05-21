@@ -2,11 +2,16 @@ import "./ServiceSection.css"
 
 import React from "react";
 import { motion } from "framer-motion";
-
 import { useTranslation } from "react-i18next";
-import { ServiceImages } from "../ServiceImages/ServiceImages";
+
+import { Slider } from "../Slider/Slider";
+import { SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cube";
+import "swiper/css/pagination";
 
 import Modal from "../Modal/Modal";
+
 
 export const ServiceSection = ({ service }) => {
 
@@ -42,7 +47,11 @@ export const ServiceSection = ({ service }) => {
 					})}
 					<Modal type_service={service.title} />
 				</div>
-				<ServiceImages className="wow" service={service} />
+				<Slider>
+					<SwiperSlide><img src={service.img_1} alt="service" /></SwiperSlide>
+					<SwiperSlide><img src={service.img_2} alt="service" /></SwiperSlide>
+					<SwiperSlide><img src={service.img_3} alt="service" /></SwiperSlide>
+				</Slider>
 			</div>
 		</div>
 	);

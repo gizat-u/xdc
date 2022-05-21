@@ -1,18 +1,16 @@
-import "./ServicePage.css"
-
 import React from "react";
 
-import { useTitle } from "../../utilities/useTitle";
+import { useTitle } from "../utilities/useTitle";
 import { useTranslation } from "react-i18next";
 
 import { motion } from "framer-motion";
-import { ServiceSection } from "../../components/ServiceSection/ServiceSection";
-import { services, detectService } from "./ServicePageData";
-import { BackgroundVideo } from "../../components/BackgroundVideo/BackgroundVideo";
-import { ServiceCategories } from "../../components/ServiceCategories/ServiceCategories";
+import { ServiceSection } from "../components/ServiceSection/ServiceSection";
+import { services, detectService } from "../data/Services";
+import { Background } from "../components/Background/Background";
+import { ServiceCategories } from "../components/ServiceCategories/ServiceCategories";
 
 
-export const ServicePage = () => {
+export const Services = () => {
 
 	const { t } = useTranslation();
 	const service = detectService(window.location.pathname);
@@ -37,7 +35,7 @@ export const ServicePage = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
-			<BackgroundVideo video={service.video} />
+			<Background video={service.video} />
 			<ServiceCategories services={services} path={window.location.pathname} />
 			<ServiceSection service={service} />
 		</motion.main>

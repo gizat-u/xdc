@@ -1,17 +1,17 @@
-import "./HomePage.css"
+
 
 import React, { useEffect, useState } from "react";
 
-import { useTitle } from "../../utilities/useTitle";
+import { useTitle } from "../utilities/useTitle";
 
 import { motion } from "framer-motion";
-import { Explore } from "../../components/Explore/Explore";
-import { BackgroundVideo } from "../../components/BackgroundVideo/BackgroundVideo";
+import { Explore } from "../components/Explore/Explore";
+import { Background } from "../components/Background/Background";
 
-import video_background from "../../assets/videos/explore.mp4";
+import video_background from "../assets/videos/explore.mp4";
 
 
-export const HomePage = () => {
+export const Home = () => {
 	useTitle("X Detailing Center | XDC");
 
 	const [show, setShow] = useState(false)
@@ -42,7 +42,7 @@ export const HomePage = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
-			<BackgroundVideo video={video_background} blackout={false} loop={false} />
+			<Background video={video_background} blackout={false} loop={false} />
 
 			{
 				(show) ?
