@@ -44,13 +44,15 @@ export const Explore = () => {
 		<div className="Component" >
 			<div className="section_content">
 				<div className="content_el">
-					<div>
+					<div style={{
+						marginTop: '25px',
+					}}>
 						<motion.h1 initial={"hidden"} animate={"visible"} transition={{ delay: 0.5, }} variants={animateH1} >
 							{t('Car')} <b>{t('Detaling')}</b><br /> {t('and customizing')} <br /> {t('services')}
 						</motion.h1>
 					</div>
 					<div style={{
-						marginTop: '20px',
+						marginTop: '25px',
 					}}>
 						{services.map(({ id, link, text }) => {
 							return (
