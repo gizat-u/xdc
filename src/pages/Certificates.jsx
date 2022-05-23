@@ -26,15 +26,11 @@ export const Certificates = () => {
 	const { t } = useTranslation();
 
 	const [fullpage, setFullpage] = useState(false);
-	const [imageFullscreen, setImageFullpage] = useState("/static/media/Ahmed.4ffe1eb956725304ec1a.png");
+	const [imageFullscreen, setImageFullpage] = useState("");
 
 	const fullpageHandler = (url) => {
-		if (url) {
-			setImageFullpage(url);
-			console.log('open', imageFullscreen);
-		} else {
-
-		}
+		if (url)
+			setImageFullpage(url['url']);
 		setFullpage((p) => !p);
 	}
 
@@ -61,11 +57,11 @@ export const Certificates = () => {
 				<h2>{t('Specialists & Certificates')}</h2>
 				<div className="specialists">
 					<div className="specialist">
-						<img src={ramiz} alt="..." onClick={() => fullpageHandler({ ramiz })} />
+						<img src={ramiz} alt="..." onClick={() => fullpageHandler({ url: ramiz })} />
 						<h3>{t('RAMIZ OSMANLI')}</h3>
 					</div>
 					<div className="specialist">
-						<img src={ahmed} alt="..." onClick={() => fullpageHandler({ ahmed })} />
+						<img src={ahmed} alt="..." onClick={() => fullpageHandler({ url: ahmed })} />
 						<h3>{t('AHMED KHALILOV')}</h3>
 					</div>
 				</div>
@@ -73,11 +69,11 @@ export const Certificates = () => {
 					<span>{t('Key specialists')}</span>
 				</div>
 				<Slider>
-					<SwiperSlide><img src={cert1} alt="certificate" onClick={() => fullpageHandler({ cert1 })} /></SwiperSlide>
-					<SwiperSlide><img src={cert2} alt="certificate" onClick={() => fullpageHandler({ cert2 })} /></SwiperSlide>
-					<SwiperSlide><img src={cert3} alt="certificate" onClick={() => fullpageHandler({ cert3 })} /></SwiperSlide>
-					<SwiperSlide><img src={cert4} alt="certificate" onClick={() => fullpageHandler({ cert4 })} /></SwiperSlide>
-					<SwiperSlide><img src={cert5} alt="certificate" onClick={() => fullpageHandler({ cert5 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert1} alt="certificate" onClick={() => fullpageHandler({ url: cert1 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert2} alt="certificate" onClick={() => fullpageHandler({ url: cert2 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert3} alt="certificate" onClick={() => fullpageHandler({ url: cert3 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert4} alt="certificate" onClick={() => fullpageHandler({ url: cert4 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert5} alt="certificate" onClick={() => fullpageHandler({ url: cert5 })} /></SwiperSlide>
 				</Slider>
 				{/* "this.style.display='none';" */}
 				<div

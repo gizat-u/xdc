@@ -170,6 +170,7 @@ nav .active {
 
 	.open .menu_items {
 		width: 75%;
+		margin-top: 50px;
 	}
 
 	.menu_links {
