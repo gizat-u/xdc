@@ -50,7 +50,6 @@ export const Home = () => {
 					:
 					""
 			}
-			{/* <Explore /> */}
 		</motion.main >
 	);
 }

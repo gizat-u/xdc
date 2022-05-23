@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useTitle } from "../utilities/useTitle";
 import { useTranslation } from "react-i18next";
@@ -24,6 +24,20 @@ import ahmed from "../assets/images/specialists/Ahmed.png";
 export const Certificates = () => {
 
 	const { t } = useTranslation();
+
+	const [fullpage, setFullpage] = useState(false);
+	const [imageFullscreen, setImageFullpage] = useState("/static/media/Ahmed.4ffe1eb956725304ec1a.png");
+
+	const fullpageHandler = (url) => {
+		if (url) {
+			setImageFullpage(url);
+			console.log('open', imageFullscreen);
+		} else {
+
+		}
+		setFullpage((p) => !p);
+	}
+
 	useTitle(t("Specialists & Certificates") + " | XDC");
 
 	return (
@@ -47,11 +61,11 @@ export const Certificates = () => {
 				<h2>{t('Specialists & Certificates')}</h2>
 				<div className="specialists">
 					<div className="specialist">
-						<img src={ramiz} alt="..." />
+						<img src={ramiz} alt="..." onClick={() => fullpageHandler({ ramiz })} />
 						<h3>{t('RAMIZ OSMANLI')}</h3>
 					</div>
 					<div className="specialist">
-						<img src={ahmed} alt="..." />
+						<img src={ahmed} alt="..." onClick={() => fullpageHandler({ ahmed })} />
 						<h3>{t('AHMED KHALILOV')}</h3>
 					</div>
 				</div>
@@ -59,12 +73,23 @@ export const Certificates = () => {
 					<span>{t('Key specialists')}</span>
 				</div>
 				<Slider>
-					<SwiperSlide><img src={cert1} alt="certificate" /></SwiperSlide>
-					<SwiperSlide><img src={cert2} alt="certificate" /></SwiperSlide>
-					<SwiperSlide><img src={cert3} alt="certificate" /></SwiperSlide>
-					<SwiperSlide><img src={cert4} alt="certificate" /></SwiperSlide>
-					<SwiperSlide><img src={cert5} alt="certificate" /></SwiperSlide>
+					<SwiperSlide><img src={cert1} alt="certificate" onClick={() => fullpageHandler({ cert1 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert2} alt="certificate" onClick={() => fullpageHandler({ cert2 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert3} alt="certificate" onClick={() => fullpageHandler({ cert3 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert4} alt="certificate" onClick={() => fullpageHandler({ cert4 })} /></SwiperSlide>
+					<SwiperSlide><img src={cert5} alt="certificate" onClick={() => fullpageHandler({ cert5 })} /></SwiperSlide>
 				</Slider>
+				{/* "this.style.display='none';" */}
+				<div
+					id="fullpage"
+					onClick={() => fullpageHandler()}
+					style={fullpage ? {
+						backgroundImage: `url(${imageFullscreen})`,
+						display: "flex",
+					} : {}}
+				>
+
+				</div>
 			</Container>
 		</motion.main >
 	);
@@ -80,6 +105,22 @@ const Container = styled.div`
 	.swiper img {
 		height: 300px;
 		width: auto;
+	}
+	.open {
+		display: flex;
+	}
+	#fullpage {
+		display: none;
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-size: contain;
+		background-repeat: no-repeat no-repeat;
+		background-position: center center;
+		background-color: black;
 	}
 	h2{
 		color: #fff;
@@ -133,6 +174,7 @@ const Container = styled.div`
 		color: #fff;
 		font-family: "PhonkRegular",sans-serif;
 		font-weight: lighter;
+		width: 80%;
 	}
 	
 	.specialists .specialist img {

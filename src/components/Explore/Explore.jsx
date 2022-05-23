@@ -44,18 +44,24 @@ export const Explore = () => {
 		<div className="Component" >
 			<div className="section_content">
 				<div className="content_el">
-					<motion.h1 initial={"hidden"} animate={"visible"} transition={{ delay: 0.5, }} variants={animateH1} >
-						{t('Car')} <b>{t('Detaling')}</b><br /> {t('and customizing')} <br /> {t('services')}
-					</motion.h1>
-					{services.map(({ id, link, text }) => {
-						return (
-							<motion.span key={id} variants={animateServices} initial="hidden" animate="visible" custom={id}>
-								<Link to={link} >
-									{t(text)}
-								</Link>
-							</motion.span>
-						);
-					})}
+					<div>
+						<motion.h1 initial={"hidden"} animate={"visible"} transition={{ delay: 0.5, }} variants={animateH1} >
+							{t('Car')} <b>{t('Detaling')}</b><br /> {t('and customizing')} <br /> {t('services')}
+						</motion.h1>
+					</div>
+					<div style={{
+						marginTop: '20px',
+					}}>
+						{services.map(({ id, link, text }) => {
+							return (
+								<motion.span key={id} variants={animateServices} initial="hidden" animate="visible" custom={id}>
+									<Link to={link} >
+										{t(text)}
+									</Link>
+								</motion.span>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>
