@@ -18,6 +18,7 @@ import leather_trimming_price from "../assets/images/prices/leather_trimming.png
 import pdr_price from "../assets/images/prices/pdr.png";
 import polishing_price from "../assets/images/prices/polishing.png";
 import window_tint_price from "../assets/images/prices/window_tint.png";
+import painting_price from "../assets/images/prices/painting.png";
 
 // Window Tint
 import window_tint_1 from "../assets/images/slider/WindowTint1.png";
@@ -104,12 +105,13 @@ export const services = [
 
 export const prices = [
 	{ key: 1, price: car_washing_price },
-	{ key: 2, price: ceramic_price },
-	{ key: 3, price: dry_cleaning_price },
-	{ key: 4, price: leather_trimming_price },
+	{ key: 2, price: polishing_price },
+	{ key: 3, price: ceramic_price },
+	{ key: 4, price: window_tint_price },
 	{ key: 5, price: pdr_price },
-	{ key: 6, price: polishing_price },
-	{ key: 7, price: window_tint_price },
+	{ key: 6, price: painting_price },
+	{ key: 7, price: dry_cleaning_price },
+	{ key: 8, price: leather_trimming_price },
 ];
 
 const CarWashingData = {

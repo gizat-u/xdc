@@ -140,6 +140,8 @@ const Container = styled.div`
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+
+		margin: 10px;
 	
 		align-items: center;
 		text-align: center;
@@ -154,7 +156,7 @@ const Container = styled.div`
 	}
 	
 	.specialists .specialist:hover img {
-		transform: scale(1.2);
+		transform: scale(1.05);
 	}
 	
 	.specialist_role {
@@ -174,7 +176,7 @@ const Container = styled.div`
 	}
 	
 	.specialists .specialist img {
-		height: 300px;
+		width: 150px;
 		transition: 0.35s all;
 	}
 	
@@ -184,7 +186,6 @@ const Container = styled.div`
 		text-transform: uppercase;
 		font-family: "PhonkRegular", sans-serif;
 		font-weight: lighter;
-		margin-top: -20px;
 	
 	}
 
@@ -194,14 +195,7 @@ const Container = styled.div`
 			width: 45%;
 		}
 
-		.specialist img {
-			width: 100%;
-			height: auto !important;
-		}
 
-		.specialists .specialist h3 {
-			margin-top: 0;
-		}
 
 	}
 `;
