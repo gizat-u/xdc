@@ -47,4 +47,9 @@
         font-size: 20px;
         line-height: 2rem;
     }
+
+    .content_el a:hover {
+        transform: none;
+        color: #fff;
+    }
 }
