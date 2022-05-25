@@ -42,7 +42,7 @@ export const Home = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
-			<Background video={video_background} blackout={false} loop={false} />
+			<Background video={video_background} blackout={false} loop={false} important={true} />
 
 			{
 				(show) ?
