@@ -18,8 +18,8 @@ import cert3 from "../assets/images/certificates/3.png";
 import cert4 from "../assets/images/certificates/4.png";
 import cert5 from "../assets/images/certificates/5.png";
 
-import ramiz from "../assets/images/specialists/Ramiz.png";
-import ahmed from "../assets/images/specialists/Ahmed.png";
+import ramiz from "../assets/images/specialists/Ramiz.jpg";
+import ahmed from "../assets/images/specialists/Ahmed.jpg";
 
 export const Certificates = () => {
 
@@ -153,6 +153,10 @@ const Container = styled.div`
 	
 	.specialists .specialist:hover h3 {
 		color: red;
+	}
+
+	.specialists .specialist img {
+		border-radius: 10px;
 	}
 	
 	.specialists .specialist:hover img {
