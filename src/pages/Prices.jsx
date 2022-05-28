@@ -6,15 +6,18 @@ import { motion } from "framer-motion";
 import { useTitle } from "../utilities/useTitle";
 import Modal from "../components/Modal/Modal";
 
-import { prices } from "../data/Services";
+import en_pc_price from "../assets/images/prices/en_pc_price.png";
+import ru_pc_price from "../assets/images/prices/ru_pc_price.png";
+import en_mb_price from "../assets/images/prices/en_mb_price.png";
+import ru_mb_price from "../assets/images/prices/ru_mb_price.png";
 
-import pricelist from "../assets/images/prices.png";
-
-
+import { useTranslation } from "react-i18next";
 
 
 export const Prices = () => {
-	useTitle("Prices | XDC");
+
+	const { t } = useTranslation();
+	useTitle(t('Prices') + " | XDC");
 
 	return (
 		<motion.main
@@ -35,14 +38,18 @@ export const Prices = () => {
 		>
 			<Container>
 				<div className="pc_prices">
-					<img src={pricelist} alt="price" />
+					{t('lang') === 'ru' ?
+						<img src={ru_pc_price} alt="price" />
+						:
+						<img src={en_pc_price} alt="price" />
+					}
 				</div>
 				<div className="mb_prices">
-					{prices.map(({ key, price }) => {
-						return (
-							<img key={key} src={price} alt="price" />
-						);
-					})}
+					{t('lang') === 'ru' ?
+						<img src={ru_mb_price} alt="price" />
+						:
+						<img src={en_mb_price} alt="price" />
+					}
 				</div>
 				<Modal />
 			</Container>

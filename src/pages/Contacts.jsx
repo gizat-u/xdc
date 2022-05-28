@@ -8,9 +8,12 @@ import { Background } from "../components/Background/Background";
 import map_background from "../assets/images/map.png";
 import { ContactSection } from "../components/ContactSection/ContactSection";
 
+import { useTranslation } from "react-i18next";
+
 export const Contacts = () => {
 
-	useTitle("Contacts | XDC");
+	const { t } = useTranslation();
+	useTitle(t('Contacts') + " | XDC");
 
 	return (
 		<motion.main

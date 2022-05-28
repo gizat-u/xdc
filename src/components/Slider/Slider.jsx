@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 
-import { Autoplay, EffectCube, Pagination } from "swiper";
+import { Autoplay, EffectCube, Pagination, Navigation } from "swiper";
 
 export const Slider = ({ children }) => {
 
@@ -35,7 +35,7 @@ export const Slider = ({ children }) => {
 				loop={true}
 				pagination={true}
 				autoplay={{
-					delay: 2500,
+					delay: 4000,
 					disableOnInteraction: false,
 				}}
 				cubeEffect={{
@@ -44,7 +44,8 @@ export const Slider = ({ children }) => {
 					shadowOffset: 20,
 					shadowScale: 0.94,
 				}}
-				modules={[Autoplay, EffectCube, Pagination]}
+				navigation={true}
+				modules={[Autoplay, EffectCube, Pagination, Navigation]}
 				className="mySwiper"
 			>
 				{children}
