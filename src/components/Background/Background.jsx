@@ -2,7 +2,6 @@ import './Background.css';
 
 import { motion } from "framer-motion";
 
-import video_static from '../../assets/images/video.jpg'
 
 export const Background = ({
 	video,
@@ -10,7 +9,8 @@ export const Background = ({
 	image = false,
 	loop = true,
 	important = false,
-	background_img }) => {
+	background_img
+}) => {
 
 
 	const animateImg = {
@@ -22,7 +22,7 @@ export const Background = ({
 			height: "100%",
 			opacity: 1,
 			transition: {
-				delay: 0.5,
+				delay: 0.1,
 			}
 		}
 	}

@@ -11,6 +11,10 @@ header {
 	z-index: 1;
 }
 
+.background_image_header {
+	display: none;
+}
+
 nav {
 	display: flex;
 	flex-direction: row;

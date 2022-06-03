@@ -10,6 +10,9 @@ import { FaTimes } from 'react-icons/fa';
 import logo from "../../assets/images/logo.png";
 
 import { useTranslation } from "react-i18next";
+import { Background } from "../Background/Background";
+
+import background_img from "../../assets/images/background/main_1.jpg";
 
 
 export default function Header({ ButtonLanguage }) {
@@ -55,6 +58,11 @@ export default function Header({ ButtonLanguage }) {
 					</Link>
 				</div>
 				<div className={`menu ${menu ? 'open' : ''} `}>
+					{menu ?
+						<Background video={background_img} loop={false} blackout={true} image={true} />
+						:
+						''
+					}
 					<div className="menu_items">
 						{social_links.map(({ id, link, text }) => {
 							return (

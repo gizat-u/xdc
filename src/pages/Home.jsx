@@ -9,7 +9,7 @@ import { Explore } from "../components/Explore/Explore";
 import { Background } from "../components/Background/Background";
 
 import video_background from "../assets/videos/explore.mp4";
-
+import background_img from "../assets/images/background/main_1.jpg";
 
 export const Home = () => {
 	useTitle("X Detailing Center | XDC");
@@ -42,7 +42,11 @@ export const Home = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
-			<Background video={video_background} blackout={false} loop={false} important={true} />
+			<Background
+				video={video_background}
+				background_img={background_img}
+				blackout={false} loop={false} important={true}
+			/>
 
 			{
 				(show) ?
