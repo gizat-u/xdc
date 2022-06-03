@@ -14,7 +14,31 @@ import background_img from "../assets/images/background/main_1.jpg";
 export const Home = () => {
 	useTitle("X Detailing Center | XDC");
 
-	const [show, setShow] = useState(false)
+	const [show, setShow] = useState(false);
+	const [mobile, setMobile] = useState(false);
+	const [width, setWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		function handleResize() {
+			setWidth(window.innerWidth);
+		}
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, [width]);
+
+	const handleMobile = (state) => {
+		if (state) {
+			setMobile(true);
+			setShow(true);
+		}
+		else
+			setMobile(false);
+	}
+
+	useEffect(() => {
+		width >= 768 && handleMobile(false);
+		width <= 768 && handleMobile(true);
+	}, [width]);
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
@@ -23,7 +47,7 @@ export const Home = () => {
 
 		return () => clearTimeout(timeout)
 
-	}, [show])
+	}, [show]);
 
 	return (
 		<motion.main
@@ -45,7 +69,8 @@ export const Home = () => {
 			<Background
 				video={video_background}
 				background_img={background_img}
-				blackout={false} loop={false} important={true}
+				blackout={false} loop={false} important={false}
+				blackout_img={true}
 			/>
 
 			{

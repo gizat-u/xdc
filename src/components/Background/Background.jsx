@@ -9,7 +9,8 @@ export const Background = ({
 	image = false,
 	loop = true,
 	important = false,
-	background_img
+	background_img,
+	blackout_img = false
 }) => {
 
 
@@ -48,6 +49,7 @@ export const Background = ({
 						<>
 							<div className="background_video_content">
 								<img src={background_img} alt="service" />
+								<div className="background_video_blackout" />
 							</div>
 							<video autoPlay playsInline muted loop={loop} preload="true" >
 								<source src={video} type="video/mp4" />
@@ -56,6 +58,7 @@ export const Background = ({
 					}
 				</>
 			}
+
 			{blackout ?
 				<div className="background_video_blackout" />
 				:
