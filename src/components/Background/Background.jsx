@@ -49,7 +49,11 @@ export const Background = ({
 						<>
 							<div className="background_video_content">
 								<img src={background_img} alt="service" />
-								<div className="background_video_blackout" />
+								{blackout_img ?
+									<div className="background_video_blackout" />
+									:
+									<></>
+								}
 							</div>
 							<video autoPlay playsInline muted loop={loop} preload="true" >
 								<source src={video} type="video/mp4" />
