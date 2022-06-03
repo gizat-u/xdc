@@ -12,6 +12,9 @@ import en_mb_price from "../assets/images/prices/en_mb_price.png";
 import ru_mb_price from "../assets/images/prices/ru_mb_price.png";
 
 import { useTranslation } from "react-i18next";
+import { Background } from "../components/Background/Background";
+
+import background_img from "../assets/images/background/price.jpg";
 
 
 export const Prices = () => {
@@ -36,6 +39,7 @@ export const Prices = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
+			<Background video={background_img} loop={false} blackout={true} image={true} />
 			<Container>
 				<div className="pc_prices">
 					{t('lang') === 'ru' ?
@@ -63,6 +67,7 @@ const Container = styled.div`
 	width: 78%;
 	margin: auto;
 	margin-top: 50px;
+	z-index: 5;
 
 	img {
 		width: 100%;

@@ -35,7 +35,7 @@ export const Services = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
-			<Background video={service.video} />
+			<Background video={service.video} background_img={service.background} />
 			<ServiceCategories services={services} path={window.location.pathname} />
 			<ServiceSection service={service} />
 		</motion.main>

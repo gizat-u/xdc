@@ -26,8 +26,7 @@
 
 	margin: 15px 0;
 	padding: 8px;
-	/* font-size: 8px; */
-	font-size: calc(0.1vw + 0.85vmin);
+	font-size: 8px;
 
 	text-align: center;
 	text-transform: uppercase;
@@ -68,13 +67,20 @@
 	padding-top: 120px;
 	height: auto;
 
+	align-content: flex-start;
+
 	height: 84% !important;
 }
 
 .service_categories .open span {
-	width: 39%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 42%;
 	border: 1px solid #fff;
 	margin: 10px;
+	min-height: 13%;
 }
 
 .service_categories .open span a {
@@ -93,10 +99,19 @@
 	.service_categories {
 		z-index: 2;
 	}
+
+	.service_categories_content a {
+		font-size: 13px;
+	}
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
 	.service_categories_content {
 		width: 100%;
+	}
+
+	.service_categories_content a {
+		font-size: 13px;
 	}
 }

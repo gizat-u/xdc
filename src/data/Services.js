@@ -20,6 +20,18 @@ import polishing_price from "../assets/images/prices/polishing.png";
 import window_tint_price from "../assets/images/prices/window_tint.png";
 import painting_price from "../assets/images/prices/painting.png";
 
+// Background Images
+import car_washing_img from "../assets/images/background/car_washing_img.jpg"
+import ceramic_img from "../assets/images/background/ceramic_img.jpg"
+import cleaning_img from "../assets/images/background/cleaning_img.jpg"
+import design_img from "../assets/images/background/design_img.jpg"
+import leather_img from "../assets/images/background/leather_img.jpg"
+import painting_img from "../assets/images/background/painting_img.jpg"
+import pdr_img from "../assets/images/background/pdr_img.jpg"
+import polishing_img from "../assets/images/background/polishing_img.jpg"
+import tint_img from "../assets/images/background/tint_img.jpg"
+import vinyl_img from "../assets/images/background/vinyl_img.jpg"
+
 // Window Tint
 import window_tint_1 from "../assets/images/slider/WindowTint1.png";
 import window_tint_2 from "../assets/images/slider/WindowTint2.png";
@@ -116,6 +128,7 @@ export const prices = [
 
 const CarWashingData = {
 	title: "Car Washing",
+	background: car_washing_img,
 	video: washing_video,
 	p: [
 		'Car Washing 1',
@@ -130,6 +143,7 @@ const CarWashingData = {
 
 const DryCleaningData = {
 	title: "Dry Cleaning",
+	background: cleaning_img,
 	video: cleaning_video,
 	p: [
 		'Dry Cleaning 1',
@@ -144,6 +158,7 @@ const DryCleaningData = {
 
 const PolishingData = {
 	title: "Polishing",
+	background: polishing_img,
 	video: polishing_video,
 	p: [
 		'Polishing 1',
@@ -158,6 +173,7 @@ const PolishingData = {
 
 const CeramicCoatingData = {
 	title: "Ceramic Coating",
+	background: ceramic_img,
 	video: ceramic_video,
 	p: [
 		'Ceramic Coating 1',
@@ -172,6 +188,7 @@ const CeramicCoatingData = {
 
 const WindowTintData = {
 	title: "Window Tint",
+	background: tint_img,
 	video: tint_video,
 	p: [
 		'Window Tint 1',
@@ -185,6 +202,7 @@ const WindowTintData = {
 
 const VinylData = {
 	title: "Pasting with vinyl and polyurethane films",
+	background: vinyl_img,
 	video: vinyl_video,
 	p: [
 		'Pasting with vinyl and polyurethane films 1',
@@ -198,6 +216,7 @@ const VinylData = {
 
 const PDRData = {
 	title: "Paintless Dent Repair",
+	background: pdr_img,
 	video: pdr_video,
 	p: [
 		'Paintless Dent Repair 1',
@@ -211,6 +230,7 @@ const PDRData = {
 
 const PaintingData = {
 	title: "Painting",
+	background: painting_img,
 	video: painting_video,
 	p: [
 		'Painting 1',
@@ -222,6 +242,7 @@ const PaintingData = {
 
 const LeatherTrimmingData = {
 	title: 'Leather Trimming',
+	background: leather_img,
 	video: leather_video,
 	p: [
 		'Leather Trimming 1',
@@ -237,6 +258,7 @@ const LeatherTrimmingData = {
 
 const DesignCustomData = {
 	title: "Design and Custom",
+	background: design_img,
 	video: design_video,
 	p: [
 		'Design and Custom 1',

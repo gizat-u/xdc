@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 
 import video_static from '../../assets/images/video.jpg'
 
-export const Background = ({ video, blackout = true, image = false, loop = true, important = false }) => {
+export const Background = ({
+	video,
+	blackout = true,
+	image = false,
+	loop = true,
+	important = false,
+	background_img }) => {
 
 
 	const animateImg = {
@@ -22,7 +28,12 @@ export const Background = ({ video, blackout = true, image = false, loop = true,
 	}
 
 	return (
-		<motion.div className="background_video" variants={animateImg} initial="hidden" animate="visible" >
+		<motion.div
+			className="background_video"
+			variants={animateImg}
+			initial="hidden"
+			animate="visible"
+		>
 			{image ?
 				<img src={video} alt="service" />
 				:
@@ -36,7 +47,7 @@ export const Background = ({ video, blackout = true, image = false, loop = true,
 						:
 						<>
 							<div className="background_video_content">
-								<img src={video_static} alt="service" />
+								<img src={background_img} alt="service" />
 							</div>
 							<video autoPlay playsInline muted loop={loop} preload="true" >
 								<source src={video} type="video/mp4" />

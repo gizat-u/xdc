@@ -21,6 +21,9 @@ import cert5 from "../assets/images/certificates/5.png";
 import ramiz from "../assets/images/specialists/Ramiz.jpg";
 import ahmed from "../assets/images/specialists/Ahmed.jpg";
 
+import background_img from "../assets/images/background/specialist.jpg";
+import { Background } from "../components/Background/Background";
+
 export const Certificates = () => {
 
 	const { t } = useTranslation();
@@ -53,6 +56,7 @@ export const Certificates = () => {
 				transition: { duration: 0.1 }
 			}}
 		>
+			<Background video={background_img} loop={false} blackout={true} image={true} />
 			<Container>
 				<h2>{t('Specialists & Certificates')}</h2>
 				<div className="specialists">
@@ -95,6 +99,7 @@ export const Certificates = () => {
 
 const Container = styled.div`
 
+	z-index: 5;
 	.swiper {
 		height: 300px;
 	}

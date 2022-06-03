@@ -42,6 +42,8 @@
 	display: flex !important;
 }
 
+.extra_img {}
+
 @media (min-width: 150px) and (max-width: 768px) {
 	.background_video video {
 		display: none;
