@@ -10,10 +10,12 @@ export const ButtonLanguage = () => {
 	const toggleButtonLanguage = () => {
 
 
-		if (language === "en")
+		if (language === "tr")
 			setLanguage("ru");
 		if (language === "ru")
 			setLanguage("en");
+		if (language === "en")
+			setLanguage("tr");
 
 		i18next.changeLanguage(language);
 	}
